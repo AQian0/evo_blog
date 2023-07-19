@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iconify-json/ri':
+    specifier: ^1.1.10
+    version: 1.1.10
   '@unocss/reset':
     specifier: ^0.53.5
     version: 0.53.5
@@ -1053,9 +1056,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/ri@1.1.10:
+    resolution: {integrity: sha512-fsJuXLfpdxb9pfn8LFcfM6LS82j358HaI29Y1qcH1UDnt/V439rTivV6v/YSLkd4z/dZIbh5iOR8+Cg4qtu5Rw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils@2.1.7:
     resolution: {integrity: sha512-P8S3z/L1LcV4Qem9AoCfVAaTFGySEMzFEY4CHZLkfRj0Fv9LiR+AwjDgrDrzyI93U2L2mg9JHsbTJ52mF8suNw==}
