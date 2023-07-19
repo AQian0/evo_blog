@@ -1,18 +1,18 @@
 <template>
-  <div flex="~ col" justify-center items-center bg-neutral-100 shadow-lg>
-    <img aspect-square w-64 mb-16 rounded-full src="/avatar.jpg" />
+  <div flex="~ col" items-center justify-center bg-neutral-100 shadow-lg>
+    <img mb-16 aspect-square w-64 rounded-full src="/avatar.jpg" />
     <ul flex="~ col" mb-8 space-y-4>
-      <li v-for="option in nav" cursor-pointer opacity-50 un-hover:opacity-100>
+      <li v-for="option in nav" un-hover:opacity-100 cursor-pointer opacity-50>
         {{ option.label }}
       </li>
     </ul>
-    <ul flex space-x-4 text-6>
+    <ul flex text-6 space-x-4>
       <li
         v-for="icon in icons"
         :class="icon.label"
+        un-hover:opacity-100
         cursor-pointer
         opacity-50
-        un-hover:opacity-100
       ></li>
     </ul>
   </div>
