@@ -7,7 +7,9 @@ import {
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetUno({
+      attributifyPseudo: true,
+    }),
     presetAttributify(),
     presetIcons({
       collections: {
