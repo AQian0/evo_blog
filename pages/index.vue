@@ -1,27 +1,9 @@
 <template>
-  <div flex="~ col" p-20 items-center space-y-4>
-    <ul flex="~ col" space-y-4>
-      <li
-        v-for="post in posts"
-        flex="~ col"
-        justify-between
-        p-4
-        w-144
-        h-24
-        bg-zinc-50
-        border-2
-        border-zinc-200
-        rounded-2
-        cursor-pointer
-      >
-        <div flex justify-between>
-          <span>{{ post.title }}</span>
-          <span>{{ post.time }}</span>
-        </div>
-        <span>{{ post.content }}</span>
-      </li>
-    </ul>
-    <div flex justify-between items-center w-48>
+  <div flex="~ col" items-center py-20 space-y-4>
+    <home-posts>
+      <home-posts-post v-for="post in posts" :post="post"></home-posts-post>
+    </home-posts>
+    <div w-48 flex items-center justify-between>
       <button i-ri-arrow-left-s-fill text-8></button>
       <ul flex space-x-4>
         <li>1</li>
@@ -40,11 +22,13 @@ const posts = ref([
     title: 'Hello World',
     content: 'This is my first post.',
     time: '2021-10-01',
+    id: '0',
   },
   {
     title: 'Hello World',
     content: 'This is my first post.',
     time: '2021-10-01',
+    id: '1',
   },
 ]);
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div w-full :class="omittedClass">
+  <div :class="omittedClass">
     <slot></slot>
   </div>
 </template>
