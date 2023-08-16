@@ -40,7 +40,12 @@ interface propsType {
 const props = defineProps<propsType>();
 const goPost = async () => {
   if (!props.post.id) return;
-  await navigateTo(`/post?id:${props.post.id}`);
+  await navigateTo({
+    path: '/post',
+    query: {
+      id: props.post.id,
+    },
+  });
 };
 </script>
 <style scoped></style>
