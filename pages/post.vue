@@ -1,5 +1,6 @@
 <template>
   <div flex="~ col" items-center>
+    <base-page-header></base-page-header>
     <div
       fixed
       left-0
@@ -48,7 +49,7 @@ const extendedList = ref([
   },
 ]);
 onMounted(() => {
-  console.log(route.query.id);
+  console.log(route);
 });
 </script>
 <style scoped></style>
