@@ -5,7 +5,12 @@ export default defineNuxtConfig({
       title: 'evo_blog',
     },
   },
-  modules: ['@nuxtjs/eslint-module', '@unocss/nuxt', '@vueuse/nuxt'],
+  modules: [
+    '@nuxtjs/eslint-module',
+    '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/supabase',
+  ],
   css: ['@unocss/reset/tailwind.css'],
   devtools: { enabled: true },
 });
