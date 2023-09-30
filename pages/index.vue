@@ -17,19 +17,21 @@
   </div>
 </template>
 <script lang="ts" setup>
-const posts = ref([
-  {
-    title: 'Hello World',
-    content: 'This is my first post.',
-    time: '2021-10-01',
-    id: '0',
-  },
-  {
-    title: 'Hello World',
-    content: 'This is my first post.',
-    time: '2021-10-01',
-    id: '1',
-  },
-]);
+import type { Database } from '@/types';
+const client = useSupabaseClient<Database>();
+
+const posts = ref();
+const { data: fetchPosts } = await useAsyncData('posts', async () => {
+  const { data, error } = await client.from('post').select('*');
+  if (error) throw error;
+  const posts = data.map(({ id, title, content, createdAt }) => ({
+    id,
+    title,
+    content,
+    time: createdAt.toString().split('T')[0],
+  }));
+  return posts;
+});
+posts.value = fetchPosts.value;
 </script>
 <style scoped></style>
