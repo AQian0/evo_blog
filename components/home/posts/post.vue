@@ -29,13 +29,10 @@
   </li>
 </template>
 <script lang="ts" setup>
+import type { Post } from 'types';
+
 interface propsType {
-  post: {
-    title: string;
-    content: string;
-    time: string;
-    id: string;
-  };
+  post: Post;
 }
 const props = defineProps<propsType>();
 const goPost = async () => {
