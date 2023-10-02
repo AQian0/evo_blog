@@ -3,35 +3,53 @@
     <home-posts>
       <home-posts-post v-for="post in posts" :post="post"></home-posts-post>
     </home-posts>
-    <div w-48 flex items-center justify-between>
-      <button i-ri-arrow-left-s-fill text-8></button>
-      <ul flex space-x-4>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-      </ul>
-      <button i-ri-arrow-right-s-fill text-8></button>
-    </div>
+    <base-pagination
+      :total="total"
+      :page-size="pageSize"
+      :current-page="currentPage"
+      @change="changePage"
+    ></base-pagination>
   </div>
 </template>
 <script lang="ts" setup>
 import type { Database } from '@/types';
 const client = useSupabaseClient<Database>();
 
-const posts = ref();
-const { data: fetchPosts } = await useAsyncData('posts', async () => {
-  const { data, error } = await client.from('post').select('*');
+const currentPage = ref(1);
+const pageSize = ref(10);
+const changePage = (page: number) => {
+  currentPage.value = page;
+};
+
+const { data: total } = await useAsyncData('total', async () => {
+  const { count, error } = await client
+    .from('post')
+    .select('*', { count: 'exact' });
   if (error) throw error;
-  const posts = data.map(({ id, title, content, createdAt }) => ({
-    id,
-    title,
-    content,
-    time: createdAt.toString().split('T')[0],
-  }));
-  return posts;
+  return count;
 });
-posts.value = fetchPosts.value;
+const { data: posts } = await useAsyncData(
+  'posts',
+  async () => {
+    const { data, error } = await client
+      .from('post')
+      .select('*')
+      .range(
+        (currentPage.value - 1) * pageSize.value,
+        currentPage.value * pageSize.value - 1,
+      );
+    if (error) throw error;
+    const posts = data.map(({ id, title, content, createdAt }) => ({
+      id,
+      title,
+      content,
+      time: createdAt.toString().split('T')[0],
+    }));
+    return posts;
+  },
+  {
+    watch: [currentPage],
+  },
+);
 </script>
 <style scoped></style>
