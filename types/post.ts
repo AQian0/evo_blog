@@ -1,7 +1,7 @@
 import { Json } from './supabase';
 
 export interface Post {
-  id: string;
+  id: number;
   title: Json;
   content: Json;
   time: string;
