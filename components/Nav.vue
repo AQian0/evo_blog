@@ -13,6 +13,7 @@
         un-hover:opacity-100
         cursor-pointer
         opacity-50
+        @click="goExternal(icon.path)"
       ></li>
     </ul>
   </div>
@@ -26,7 +27,7 @@ const nav = ref([
 const icons = ref([
   {
     label: 'i-ri-github-line',
-    path: '',
+    path: 'https://github.com/Cupkiller-vip',
   },
   {
     label: 'i-ri-qq-line',
@@ -37,9 +38,12 @@ const icons = ref([
     path: '',
   },
   {
-    label: 'i-ri-alipay-line',
+    label: 'i-ri-netease-cloud-music-line',
     path: '',
   },
 ]);
+const goExternal = (path: string) => {
+  window.open(path);
+};
 </script>
 <style scoped></style>
