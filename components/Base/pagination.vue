@@ -5,7 +5,7 @@
       <li
         v-for="item in sizeList"
         cursor-pointer
-        :class="currentPage === item ? '' : 'text-zinc-400'"
+        :class="currentPage === item ? '' : 'text-zinc'"
       >
         {{ item }}
       </li>
