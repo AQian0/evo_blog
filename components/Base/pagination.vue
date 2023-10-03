@@ -1,6 +1,12 @@
 <template>
   <div w-48 flex items-center justify-between>
-    <button i-ri-arrow-left-s-fill text-8 @click="turnPage('up')"></button>
+    <button
+      :class="currentPage > 1 ? '' : ['text-zinc', 'cursor-not-allowed']"
+      :disabled="currentPage <= 1"
+      i-ri-arrow-left-s-fill
+      text-8
+      @click="turnPage('up')"
+    ></button>
     <ul flex space-x-4>
       <li
         v-for="item in sizeList"
@@ -10,7 +16,15 @@
         {{ item }}
       </li>
     </ul>
-    <button i-ri-arrow-right-s-fill text-8 @click="turnPage('down')"></button>
+    <button
+      :class="
+        currentPage < sizeList.length ? '' : ['text-zinc', 'cursor-not-allowed']
+      "
+      :disabled="currentPage >= sizeList.length"
+      i-ri-arrow-right-s-fill
+      text-8
+      @click="turnPage('down')"
+    ></button>
   </div>
 </template>
 <script lang="ts" setup>
@@ -24,7 +38,7 @@ const emit = defineEmits<{
   change: [page: number];
 }>();
 const sizeList = computed(() => {
-  if (!props.total) return;
+  if (!props.total) return [];
   const totalPages = Math.ceil(props.total / props.pageSize);
   let lowPage = props.currentPage - 2 > 0 ? props.currentPage - 2 : 1;
   let highPage =
