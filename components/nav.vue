@@ -1,6 +1,6 @@
 <template>
   <div flex="~ col" items-center justify-center bg-neutral-100 shadow-lg>
-    <img mb-16 aspect-square w-64 rounded-full src="/avatar.jpg" />
+    <img mb-16 aspect-square w-64 rounded-full :src="avatar" />
     <ul flex="~ col" mb-8 space-y-4>
       <li v-for="option in nav" un-hover:opacity-100 cursor-pointer opacity-50>
         {{ option.label }}
@@ -45,5 +45,8 @@ const icons = ref([
 const goExternal = (path: string) => {
   window.open(path);
 };
+const avatar = ref(
+  'https://raw.githubusercontent.com/Cupkiller-vip/evo_blog_images/main/avatar.jpg',
+);
 </script>
 <style scoped></style>
