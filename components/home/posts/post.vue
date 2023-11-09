@@ -23,9 +23,9 @@
         props.post.time
       }}</base-text>
     </div>
-    <base-text omitted group-hover:text-white>{{
-      props.post.content
-    }}</base-text>
+    <base-text omitted group-hover:text-white>
+      <div v-html="props.post.content"></div
+    ></base-text>
   </li>
 </template>
 <script lang="ts" setup>
