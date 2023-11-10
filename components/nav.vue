@@ -1,6 +1,13 @@
 <template>
   <div flex="~ col" items-center justify-center bg-neutral-100 shadow-lg>
-    <NuxtImg mb-16 aspect-square w-64 rounded-full src="avatar.jpg" />
+    <NuxtImg
+      mb-16
+      aspect-square
+      w-64
+      rounded-full
+      src="avatar.jpg"
+      alt="avatar"
+    />
     <ul flex="~ col" mb-8 space-y-4>
       <li v-for="option in nav" un-hover:opacity-100 cursor-pointer opacity-50>
         {{ option.label }}
