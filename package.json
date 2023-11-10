@@ -18,6 +18,7 @@
     "@commitlint/config-conventional": "^17.6.6",
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/html-validator": "^1.5.2",
     "@nuxtjs/supabase": "^1.0.2",
     "@types/node": "^18.16.19",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
