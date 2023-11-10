@@ -38,7 +38,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { Database } from '@/types';
+import type { Database } from '@/types';
 
 const route = useRoute();
 const client = useSupabaseClient<Database>();

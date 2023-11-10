@@ -29,7 +29,7 @@
   </li>
 </template>
 <script lang="ts" setup>
-import { Post } from 'types';
+import type { Post } from '@/types';
 
 interface propsType {
   post: Post;

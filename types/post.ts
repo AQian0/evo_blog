@@ -1,4 +1,4 @@
-import { Json } from './supabase';
+import type { Json } from './supabase';
 
 export interface Post {
   id: number;
