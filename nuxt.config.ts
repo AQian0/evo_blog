@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'evo_blog',
+      htmlAttrs: {
+        lang: 'zh-CN',
+      },
     },
   },
   modules: [
