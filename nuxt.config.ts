@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'evo_blog',
+      htmlAttrs: {
+        lang: 'zh-CN',
+      },
     },
   },
   modules: [
@@ -10,6 +13,8 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/supabase',
+    '@nuxtjs/html-validator',
+    '@nuxt/image',
   ],
   css: ['@unocss/reset/tailwind.css'],
   devtools: { enabled: true },
@@ -18,5 +23,17 @@ export default defineNuxtConfig({
   },
   typescript: {
     strict: true,
+  },
+  image: {
+    providers: {
+      imageProvider: {
+        name: 'imageProvider',
+        provider: '~/utils/imageProvider.ts',
+        options: {
+          baseURL:
+            'https://raw.githubusercontent.com/Cupkiller-vip/evo_blog_images/main/',
+        },
+      },
+    },
   },
 });
