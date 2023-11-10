@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/supabase',
     '@nuxtjs/html-validator',
+    '@nuxt/image',
   ],
   css: ['@unocss/reset/tailwind.css'],
   devtools: { enabled: true },
