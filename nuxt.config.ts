@@ -36,4 +36,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  htmlValidator: {
+    options: {
+      rules: {
+        'text-content': 'off',
+      },
+    },
+  },
 });
