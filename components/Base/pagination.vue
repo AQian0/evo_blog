@@ -5,6 +5,7 @@
       :disabled="currentPage <= 1"
       i-ri-arrow-left-s-fill
       text-8
+      type="button"
       @click="turnPage('up')"
     ></button>
     <ul flex space-x-4>
@@ -23,6 +24,7 @@
       :disabled="currentPage >= sizeList.length"
       i-ri-arrow-right-s-fill
       text-8
+      type="button"
       @click="turnPage('down')"
     ></button>
   </div>
