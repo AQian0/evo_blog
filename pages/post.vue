@@ -28,12 +28,12 @@
       class="left-70% top-70%"
       :style="`opacity: ${extendedListOpacity}`"
     >
-      <div
+      <button
         v-for="item in extendedList"
         :class="item.label"
         cursor-pointer
         @click="item.method"
-      ></div>
+      ></button>
     </div>
   </div>
 </template>
