@@ -7,6 +7,10 @@ export default defineNuxtConfig({
         lang: 'zh-CN',
       },
     },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
   },
   modules: [
     '@nuxtjs/eslint-module',
