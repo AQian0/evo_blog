@@ -18,8 +18,9 @@
   </div>
 </template>
 <script lang="ts" setup>
+const router = useRouter();
 const goBack = () => {
-  window.history.back();
+  router.back();
 };
 </script>
 <style scoped></style>

@@ -49,8 +49,12 @@ const icons = ref([
     path: '',
   },
 ]);
-const goExternal = (path: string) => {
-  window.open(path);
+const goExternal = async (path: string) => {
+  await navigateTo(path, {
+    open: {
+      target: '_blank',
+    },
+  });
 };
 </script>
 <style scoped></style>
