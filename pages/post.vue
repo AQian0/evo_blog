@@ -32,6 +32,7 @@
         v-for="item in extendedList"
         :class="item.label"
         cursor-pointer
+        type="button"
         @click="item.method"
       ></button>
     </div>
