@@ -24,8 +24,8 @@
       }}</base-text>
     </div>
     <base-text omitted group-hover:text-white>
-      <div v-html="props.post.content"></div
-    ></base-text>
+      {{ extractText }}
+    </base-text>
   </li>
 </template>
 <script lang="ts" setup>
@@ -35,6 +35,12 @@ interface propsType {
   post: Post;
 }
 const props = defineProps<propsType>();
+const extractText = computed(() => {
+  return (props.post.content as string)
+    .replace(/<img\b[^>]*>/gi, '[图片]')
+    .replace(/<[^>]+>/g, '')
+    .substring(0, 100);
+});
 const goPost = async () => {
   if (!props.post.id) return;
   await navigateTo({
