@@ -13,7 +13,7 @@
       bg-gradient-to-t
     ></div>
     <div mt-48 indent-2 text-10 tracking-0.5rem>{{ post?.title }}</div>
-    <div relative my-8 w-168 text-6 class="content">
+    <div relative my-8 w-192 text-6 class="content">
       <div v-html="post?.content"></div>
     </div>
     <div w-168 flex justify-end font-italic text-zinc>
