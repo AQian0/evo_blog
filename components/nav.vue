@@ -1,11 +1,11 @@
 <template>
   <div flex="~ col" items-center justify-center bg-neutral-100 shadow-lg>
-    <NuxtImg
+    <nuxt-img
       mb-16
       aspect-square
       w-64
       rounded-full
-      src="avatar.jpg"
+      :src="profile?.avatar"
       alt="avatar"
     />
     <ul flex="~ col" mb-8 space-y-4>
@@ -26,6 +26,9 @@
   </div>
 </template>
 <script lang="ts" setup>
+import type { Database } from '~/types';
+
+const client = useSupabaseClient<Database>();
 const nav = ref([
   { label: '关于', path: '/about' },
   { label: '联系', path: '/contact' },
@@ -49,6 +52,11 @@ const icons = ref([
     path: '',
   },
 ]);
+const { data: profile } = await useAsyncData('profile', async () => {
+  const { data, error } = await client.from('profile').select('*');
+  if (error) throw error;
+  return data[0];
+});
 const goExternal = async (path: string) => {
   await navigateTo(path, {
     open: {

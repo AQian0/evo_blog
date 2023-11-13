@@ -36,6 +36,30 @@ export interface Database {
         };
         Relationships: [];
       };
+      profile: {
+        Row: {
+          avatar: string;
+          createdAt: string;
+          id: number;
+          updatedAt: string | null;
+          username: string;
+        };
+        Insert: {
+          avatar?: string;
+          createdAt?: string;
+          id?: number;
+          updatedAt?: string | null;
+          username?: string;
+        };
+        Update: {
+          avatar?: string;
+          createdAt?: string;
+          id?: number;
+          updatedAt?: string | null;
+          username?: string;
+        };
+        Relationships: [];
+      };
     };
     Views: {
       [_ in never]: never;
