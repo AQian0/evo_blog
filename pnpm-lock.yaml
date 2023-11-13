@@ -24,7 +24,7 @@ devDependencies:
     version: 17.8.1
   '@nuxt/devtools':
     specifier: latest
-    version: 1.0.1(nuxt@3.8.1)(vite@4.5.0)
+    version: 1.0.2(nuxt@3.8.1)(vite@4.5.0)
   '@nuxtjs/eslint-module':
     specifier: ^4.1.0
     version: 4.1.0(eslint@8.53.0)(vite@4.5.0)(webpack@5.89.0)
@@ -32,7 +32,7 @@ devDependencies:
     specifier: ^1.5.2
     version: 1.5.2
   '@nuxtjs/supabase':
-    specifier: ^1.0.2
+    specifier: ^1.1.3
     version: 1.1.3
   '@types/node':
     specifier: ^18.16.19
@@ -1238,7 +1238,7 @@ packages:
       agent-base: 7.1.0
       http-proxy-agent: 7.0.0
       https-proxy-agent: 7.0.2
-      lru-cache: 10.0.1
+      lru-cache: 10.0.2
       socks-proxy-agent: 8.0.2
     transitivePeerDependencies:
       - supports-color
@@ -1256,7 +1256,7 @@ packages:
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@npmcli/promise-spawn': 7.0.0
-      lru-cache: 10.0.1
+      lru-cache: 10.0.2
       npm-pick-manifest: 9.0.0
       proc-log: 3.0.0
       promise-inflight: 1.0.1
@@ -1305,10 +1305,10 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/devtools-kit@1.0.1(nuxt@3.8.1)(vite@4.5.0):
-    resolution: {integrity: sha512-tR+9mqic2O76LWkmdH0q5xPEnrOo8DmHvKyXA99be7NQfkjf47roWfa+gvQbksqwNw3SZVw2fq9Lotk4vZj4RA==}
+  /@nuxt/devtools-kit@1.0.2(nuxt@3.8.1)(vite@4.5.0):
+    resolution: {integrity: sha512-iFi54NNCcPsF/jW14HbRlq3aOClOWdfiein0CvKoQ5shobHgn1s3xULh8o9QPKI2oTarcuJL+EFIK43CwfoXyw==}
     peerDependencies:
-      nuxt: ^3.7.4
+      nuxt: ^3.8.1
       vite: '*'
     dependencies:
       '@nuxt/kit': 3.8.1
@@ -1321,15 +1321,15 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/devtools-wizard@1.0.1:
-    resolution: {integrity: sha512-p44qhWWKR4aEy1cRHGkHQyNJ93rfpDUPhQoqrMBmGQNBWJxLCbZCrdhOWJi9kOlu2qSBbvz/4mOHEXQ2G8APsA==}
+  /@nuxt/devtools-wizard@1.0.2:
+    resolution: {integrity: sha512-fY9Y0eCJG7eSuUgnjImWVfLZPZymoHxjrVsdhfKs3yRJvB2siaabluxvdy2OTYc+WpIxuey0hjqpv+dVtnYw1A==}
     hasBin: true
     dependencies:
       consola: 3.2.3
       diff: 5.1.0
       execa: 7.2.0
       global-directory: 4.0.1
-      magicast: 0.3.1
+      magicast: 0.3.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       prompts: 2.4.2
@@ -1337,16 +1337,16 @@ packages:
       semver: 7.5.4
     dev: true
 
-  /@nuxt/devtools@1.0.1(nuxt@3.8.1)(vite@4.5.0):
-    resolution: {integrity: sha512-VwuX4g0QmKBE3GyDqVkLIt3xOz/aTFZbD1SxyT/ani4FfOAec2ksjbF4CQmGonfjL2lN1glvoew83zj4P5vi/g==}
+  /@nuxt/devtools@1.0.2(nuxt@3.8.1)(vite@4.5.0):
+    resolution: {integrity: sha512-nfqvRc36Sh20gDVs3pViHvcyyz3NmaNqgJnWUXgfjSCsT7G/p2wHsoNUXYYTF7kpk3kbNusftaWrIzAiTiXC9A==}
     hasBin: true
     peerDependencies:
-      nuxt: ^3.7.4
+      nuxt: ^3.8.1
       vite: '*'
     dependencies:
       '@antfu/utils': 0.7.6
-      '@nuxt/devtools-kit': 1.0.1(nuxt@3.8.1)(vite@4.5.0)
-      '@nuxt/devtools-wizard': 1.0.1
+      '@nuxt/devtools-kit': 1.0.2(nuxt@3.8.1)(vite@4.5.0)
+      '@nuxt/devtools-wizard': 1.0.2
       '@nuxt/kit': 3.8.1
       birpc: 0.2.14
       consola: 3.2.3
@@ -1362,7 +1362,7 @@ packages:
       is-installed-globally: 1.0.0
       launch-editor: 2.6.1
       local-pkg: 0.5.0
-      magicast: 0.3.1
+      magicast: 0.3.2
       nitropack: 2.7.2
       nuxt: 3.8.1(@types/node@18.18.9)(eslint@8.53.0)(typescript@5.2.2)(vite@4.5.0)
       nypm: 0.3.3
@@ -3343,7 +3343,7 @@ packages:
       '@npmcli/fs': 3.1.0
       fs-minipass: 3.0.3
       glob: 10.3.10
-      lru-cache: 10.0.1
+      lru-cache: 10.0.2
       minipass: 7.0.4
       minipass-collect: 1.0.2
       minipass-flush: 1.0.5
@@ -4055,8 +4055,8 @@ packages:
     resolution: {integrity: sha512-g/9rfnvnagiNf+DRMHEVGuGuIBlCIMDFoTA616HaP2l9PlCjGjVhD98PNbVSJvmK4TttqT5mV5tInMhoFgi+aA==}
     dev: true
 
-  /es-module-lexer@1.3.1:
-    resolution: {integrity: sha512-JUFAyicQV9mXc3YRxPnDlrfBKpqt6hUYzz9/boprUJHs4e4KVr3XwOF70doO6gwXUor6EWZJAyWAfKki84t20Q==}
+  /es-module-lexer@1.4.1:
+    resolution: {integrity: sha512-cXLGjP0c4T3flZJKQSuziYoq7MlT+rnvfZjfp7h+I7K9BNX54kP9nyWvdbwjQ4u1iWbOL4u96fgeZLToQlZC7w==}
     dev: true
 
   /es5-ext@0.10.62:
@@ -4827,7 +4827,7 @@ packages:
     resolution: {integrity: sha512-+K84LB1DYwMHoHSgaOY/Jfhw3ucPmSET5v98Ke/HdNSw4a0UktWzyW1mjhjpuxxTqOOsfWT/7iVshHmVZ4IpOA==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
-      lru-cache: 10.0.1
+      lru-cache: 10.0.2
     dev: true
 
   /html-tags@3.3.1:
@@ -5502,6 +5502,13 @@ packages:
     resolution: {integrity: sha512-IJ4uwUTi2qCccrioU6g9g/5rvvVl13bsdczUUcqbciD9iLr095yj8DQKdObriEvuNSx325N1rV1O0sJFszx75g==}
     engines: {node: 14 || >=16.14}
 
+  /lru-cache@10.0.2:
+    resolution: {integrity: sha512-Yj9mA8fPiVgOUpByoTZO5pNrcl5Yk37FcSHsUINpAsaBIEZIuqcCclDZJCVxqQShDsmYX8QG63svJiTbOATZwg==}
+    engines: {node: 14 || >=16.14}
+    dependencies:
+      semver: 7.5.4
+    dev: true
+
   /lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
     dependencies:
@@ -5526,8 +5533,8 @@ packages:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /magicast@0.3.1:
-    resolution: {integrity: sha512-4OS+6e5iHr9VxOeA8TqWNudbdTmKvGNd6iCeOsIDwZn7iLLg3uV3BoQfsaXgFVK5x1fXPBx5X0f6w4sb6HYSQA==}
+  /magicast@0.3.2:
+    resolution: {integrity: sha512-Fjwkl6a0syt9TFN0JSYpOybxiMCkYNEeOTnOTNRbjphirLakznZXAqrXgj/7GG3D1dvETONNwrBfinvAbpunDg==}
     dependencies:
       '@babel/parser': 7.23.3
       '@babel/types': 7.23.3
@@ -6144,7 +6151,7 @@ packages:
         optional: true
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 1.0.1(nuxt@3.8.1)(vite@4.5.0)
+      '@nuxt/devtools': 1.0.2(nuxt@3.8.1)(vite@4.5.0)
       '@nuxt/kit': 3.8.1
       '@nuxt/schema': 3.8.1
       '@nuxt/telemetry': 2.5.2
@@ -8442,7 +8449,7 @@ packages:
       browserslist: 4.22.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.15.0
-      es-module-lexer: 1.3.1
+      es-module-lexer: 1.4.1
       eslint-scope: 5.1.1
       events: 3.3.0
       glob-to-regexp: 0.4.1
