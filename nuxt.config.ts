@@ -28,18 +28,6 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-  image: {
-    providers: {
-      imageProvider: {
-        name: 'imageProvider',
-        provider: '~/utils/imageProvider.ts',
-        options: {
-          baseURL:
-            'https://raw.githubusercontent.com/Cupkiller-vip/evo_blog_images/main/',
-        },
-      },
-    },
-  },
   htmlValidator: {
     options: {
       rules: {
