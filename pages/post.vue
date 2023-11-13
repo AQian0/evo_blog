@@ -70,7 +70,7 @@ const { data: post } = await useAsyncData('post', async () => {
   const { data, error } = await client
     .from('post')
     .select('*')
-    .eq('id', route.query.id);
+    .eq('id', route.query.id as string);
   if (error) throw error;
   return data[0];
 });
