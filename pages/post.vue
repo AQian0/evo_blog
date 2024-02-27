@@ -16,7 +16,7 @@
     <div relative my-8 w-192 text-6 class="content">
       <div v-html="post?.content"></div>
     </div>
-    <div w-168 flex justify-end font-italic text-zinc>
+    <div w-192 flex justify-end font-italic text-zinc>
       ——更新于{{ useDateText(post?.updatedAt) }}
     </div>
     <div
@@ -25,7 +25,7 @@
       text-6
       transition
       space-y-4
-      class="left-76% top-70%"
+      class="left-86% top-70%"
       :style="`opacity: ${extendedListOpacity}`"
     >
       <button
