@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   ],
   css: [
     '@unocss/reset/tailwind.css',
+    '~/assets/base.css',
     '~/assets/content.css',
     'highlight.js/styles/github-dark.min.css',
   ],
