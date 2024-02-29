@@ -49,7 +49,7 @@ const nav = ref([
 const icons = ref([
   {
     label: 'i-ri-github-line',
-    path: 'https://github.com/Cupkiller-vip',
+    path: 'https://github.com/AQian-Cup',
   },
   {
     label: 'i-ri-qq-line',
