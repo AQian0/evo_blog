@@ -13,6 +13,8 @@
 </template>
 <script lang="ts" setup>
 import type { Database } from '@/types';
+
+const route = useRoute();
 const client = useSupabaseClient<Database>();
 
 const currentPage = ref(1);
@@ -28,16 +30,21 @@ const { data: total } = await useAsyncData('total', async () => {
   if (error) throw error;
   return count;
 });
+
 const { data: posts } = await useAsyncData(
   'posts',
   async () => {
-    const { data, error } = await client
+    let query = client
       .from('post')
       .select('*')
       .range(
         (currentPage.value - 1) * pageSize.value,
         currentPage.value * pageSize.value - 1,
       );
+    if (route.query.type) {
+      query = query.eq('type', route.query.type);
+    }
+    const { data, error } = await query;
     if (error) throw error;
     const posts = data.map(({ id, title, content, createdAt }) => ({
       id,
@@ -48,7 +55,7 @@ const { data: posts } = await useAsyncData(
     return posts;
   },
   {
-    watch: [currentPage],
+    watch: [currentPage, () => route.query],
   },
 );
 </script>
