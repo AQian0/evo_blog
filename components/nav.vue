@@ -1,5 +1,16 @@
 <template>
-  <div flex="~ col" items-center justify-center bg-neutral-100 shadow-lg>
+  <div
+    flex="~ col"
+    items-center
+    justify-center
+    bg-neutral-100
+    shadow-lg
+    transition-flex
+    :style="{
+      '--isRoot': route.path === '/' ? '1' : '0',
+      flex: 'var(--isRoot)',
+    }"
+  >
     <nuxt-img
       mb-16
       aspect-square
@@ -28,6 +39,7 @@
 <script lang="ts" setup>
 import type { Database } from '~/types';
 
+const route = useRoute();
 const client = useSupabaseClient<Database>();
 const nav = ref([
   { label: '关于', path: '/about' },
