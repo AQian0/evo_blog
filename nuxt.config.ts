@@ -20,7 +20,11 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxt/image',
   ],
-  css: ['@unocss/reset/tailwind.css', '~/assets/content.css'],
+  css: [
+    '@unocss/reset/tailwind.css',
+    '~/assets/content.css',
+    'highlight.js/styles/github-dark.min.css',
+  ],
   devtools: { enabled: true },
   supabase: {
     redirect: false,
