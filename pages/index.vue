@@ -44,6 +44,9 @@ const { data: posts } = await useAsyncData(
     if (route.query.type) {
       query = query.eq('type', route.query.type);
     }
+    if (route.query.search) {
+      query = query.ilike('title', `%${route.query.search}%`);
+    }
     const { data, error } = await query;
     if (error) throw error;
     const posts = data.map(({ id, title, content, createdAt }) => ({
