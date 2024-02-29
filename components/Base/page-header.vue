@@ -1,8 +1,8 @@
 <template>
   <div
     fixed
-    left-8
-    top-8
+    left-6
+    top-4
     z-10
     flex
     cursor-pointer
