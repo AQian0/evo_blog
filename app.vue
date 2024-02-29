@@ -1,6 +1,7 @@
 <template>
   <div min-h-screen w-full flex bg-zinc-100>
     <Nav overflow-hidden></Nav>
+    <NuxtLoadingIndicator :height="1"></NuxtLoadingIndicator>
     <NuxtPage class="flex-[3]"></NuxtPage>
     <div fixed top-4 right-6 text-6 z-10 opacity-50>
       <Transition name="fade" mode="out-in">
