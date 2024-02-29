@@ -1,5 +1,5 @@
 <template>
-  <div fixed top-4 right-6 text-6 z-10 opacity-50>
+  <div opacity-50>
     <Transition name="fade" mode="out-in">
       <div v-if="!isMenuExpand">
         <div
@@ -8,7 +8,7 @@
           cursor-pointer
         ></div>
       </div>
-      <div space-y-1 v-else>
+      <div space-y-2 v-else>
         <div
           v-for="menuIcon in menuIcons.slice(1)"
           @click="menuIcon.method"
