@@ -13,7 +13,12 @@ export default defineConfig({
     presetAttributify(),
     presetIcons({
       collections: {
-        ri: () => import('@iconify-json/ri/icons.json').then((i) => i.default),
+        ri: () =>
+          import('@iconify-json/ri/icons.json')
+            .then((i) => i.default)
+            .catch((err) => {
+              throw err;
+            }),
       },
     }),
   ],
