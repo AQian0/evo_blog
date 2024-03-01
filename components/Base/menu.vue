@@ -3,17 +3,17 @@
     <Transition name="fade" mode="out-in">
       <div v-if="!isMenuExpand">
         <div
-          @click="menuIcons[0].method"
           :class="menuIcons[0].label"
           cursor-pointer
+          @click="menuIcons[0].method"
         ></div>
       </div>
-      <div space-y-2 v-else>
+      <div v-else space-y-2>
         <div
           v-for="menuIcon in menuIcons.slice(1)"
-          @click="menuIcon.method"
           :class="menuIcon.label"
           cursor-pointer
+          @click="menuIcon.method"
         ></div>
       </div>
     </Transition>

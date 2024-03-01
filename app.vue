@@ -3,7 +3,7 @@
     <Nav overflow-hidden></Nav>
     <NuxtLoadingIndicator :height="1"></NuxtLoadingIndicator>
     <NuxtPage class="flex-[3]"></NuxtPage>
-    <div flex space-x-2 fixed top-4 right-6 text-6 z-10>
+    <div fixed right-6 top-4 z-10 flex text-6 space-x-2>
       <BaseSearch></BaseSearch>
       <BaseMenu></BaseMenu>
     </div>

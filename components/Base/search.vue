@@ -1,21 +1,21 @@
 <template>
-  <div h-fit text-4 border rounded-1 overflow-hidden relative m--1>
+  <div relative m--1 h-fit overflow-hidden border rounded-1 text-4>
     <input
       ref="input"
       v-model="searchContent"
-      px-2
-      py-1
       :placeholder="placeholder"
       w-72
+      px-2
+      py-1
     />
     <div
-      opacity-50
-      absolute
       i-ri-search-line
+      absolute
       right-2
-      top-50%
-      translate-y--50%
+      top="50%"
+      translate-y="-50%"
       cursor-pointer
+      opacity-50
       @click="search"
     ></div>
   </div>
