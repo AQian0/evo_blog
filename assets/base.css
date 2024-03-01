@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'HarmonyOS_Sans_Regular';
+  src: url('~/assets/fonts/HarmonyOS_Sans_Regular.ttf');
+}
+@font-face {
+  font-family: 'HarmonyOS_Sans_SC_Regular';
+  src: url('~/assets/fonts/HarmonyOS_Sans_SC_Regular.ttf');
+}
+@font-face {
+  font-family: 'HarmonyOS_Sans_TC_Regular';
+  src: url('~/assets/fonts/HarmonyOS_Sans_TC_Regular.ttf');
+}
+
+body {
+  font-family: 'HarmonyOS_Sans_Regular', 'HarmonyOS_Sans_SC_Regular',
+    'HarmonyOS_Sans_TC_Regular';
+}
+
 input:focus-visible {
   outline: none;
 }
