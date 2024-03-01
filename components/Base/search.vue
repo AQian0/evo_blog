@@ -3,6 +3,7 @@
     <input
       ref="input"
       v-model="searchContent"
+      type="text"
       :placeholder="placeholder"
       w-72
       px-2
