@@ -43,7 +43,6 @@ const route = useRoute();
 const client = useSupabaseClient<Database>();
 const nav = ref([
   { label: '关于', path: '/about' },
-  { label: '联系', path: '/contact' },
   { label: '支持', path: '/surport' },
 ]);
 const icons = ref([
