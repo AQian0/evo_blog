@@ -2,7 +2,7 @@
   <div min-h-screen w-full flex bg-zinc-100>
     <Nav overflow-hidden></Nav>
     <NuxtLoadingIndicator :height="1"></NuxtLoadingIndicator>
-    <NuxtPage class="flex-[3]"></NuxtPage>
+    <NuxtPage class="flex-[3]"> </NuxtPage>
     <div fixed right-6 top-4 z-10 flex text-6 space-x-2>
       <BaseSearch></BaseSearch>
       <BaseMenu></BaseMenu>
