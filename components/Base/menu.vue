@@ -1,18 +1,22 @@
 <template>
-  <div opacity-50>
+  <div>
     <Transition name="fade" mode="out-in">
       <div v-if="!isMenuExpand">
         <div
           :class="menuIcons[0].label"
+          un-hover:opacity-100
           cursor-pointer
+          opacity-50
           @click="menuIcons[0].method"
         ></div>
       </div>
-      <div v-else space-y-2>
+      <div v-else space-y-3>
         <div
           v-for="menuIcon in menuIcons.slice(1)"
           :class="menuIcon.label"
+          un-hover:opacity-100
           cursor-pointer
+          opacity-50
           @click="menuIcon.method"
         ></div>
       </div>
