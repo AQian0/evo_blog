@@ -20,7 +20,13 @@
       alt="avatar"
     />
     <ul flex="~ col" mb-8 space-y-4>
-      <li v-for="option in nav" un-hover:opacity-100 cursor-pointer opacity-50>
+      <li
+        v-for="option in nav"
+        un-hover:opacity-100
+        cursor-pointer
+        opacity-50
+        @click="option.method"
+      >
         {{ option.label }}
       </li>
     </ul>
@@ -42,8 +48,18 @@ import type { Database } from '~/types';
 const route = useRoute();
 const client = useSupabaseClient<Database>();
 const nav = ref([
-  { label: '关于', path: '/about' },
-  { label: '支持', path: '/surport' },
+  {
+    label: '关于',
+    method: async () => {
+      await navigateTo('/about');
+    },
+  },
+  {
+    label: '支持',
+    method: async () => {
+      await navigateTo('/surport');
+    },
+  },
 ]);
 const icons = ref([
   {
