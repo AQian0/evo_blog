@@ -1,6 +1,6 @@
 <template>
   <div ref="postRef" flex="~ col" items-center>
-    <base-page-header></base-page-header>
+    <BasePageHeader></BasePageHeader>
     <div
       fixed
       left-0

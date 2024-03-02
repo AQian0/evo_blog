@@ -1,5 +1,6 @@
 <template>
   <div
+    v-show="!isRoot"
     fixed
     left-6
     top-4
@@ -18,7 +19,11 @@
   </div>
 </template>
 <script lang="ts" setup>
+const route = useRoute();
 const router = useRouter();
+const isRoot = computed(() => {
+  return route.path === '/';
+});
 const goBack = () => {
   router.back();
 };
