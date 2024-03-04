@@ -11,6 +11,15 @@
   src: url('~/assets/fonts/HarmonyOS_Sans_TC_Regular.ttf');
 }
 
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+* ::-webkit-scrollbar {
+  display: none; /* Safari/Chrome/Opera */
+}
+
 body {
   font-family: 'HarmonyOS_Sans_Regular', 'HarmonyOS_Sans_SC_Regular',
     'HarmonyOS_Sans_TC_Regular';
