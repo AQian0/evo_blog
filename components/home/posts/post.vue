@@ -2,7 +2,7 @@
   <li
     group
     flex="~ col"
-    h-24
+    h-20
     w-160
     cursor-pointer
     justify-between
@@ -10,7 +10,8 @@
     border-zinc-200
     rounded
     bg-zinc-50
-    p-4
+    px-3
+    py-2
     transition
     hover:bg-zinc-300
     @click="goPost"
