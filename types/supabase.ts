@@ -14,24 +14,27 @@ export type Database = {
           content: string | null;
           createdAt: string;
           id: number;
+          keyword: string[] | null;
           title: string | null;
-          type: string | null;
+          type: Database['public']['Enums']['PostType'] | null;
           updatedAt: string | null;
         };
         Insert: {
           content?: string | null;
           createdAt?: string;
           id?: number;
+          keyword?: string[] | null;
           title?: string | null;
-          type?: string | null;
+          type?: Database['public']['Enums']['PostType'] | null;
           updatedAt?: string | null;
         };
         Update: {
           content?: string | null;
           createdAt?: string;
           id?: number;
+          keyword?: string[] | null;
           title?: string | null;
-          type?: string | null;
+          type?: Database['public']['Enums']['PostType'] | null;
           updatedAt?: string | null;
         };
         Relationships: [];
@@ -68,7 +71,7 @@ export type Database = {
       [_ in never]: never;
     };
     Enums: {
-      [_ in never]: never;
+      PostType: 'article' | 'book';
     };
     CompositeTypes: {
       [_ in never]: never;
