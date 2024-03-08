@@ -30,10 +30,10 @@
   </li>
 </template>
 <script lang="ts" setup>
-import type { Post } from '@/types';
+import type { Database } from '@/types';
 
 interface propsType {
-  post: Post;
+  post: Database.public.Tables.post.Row;
 }
 const props = defineProps<propsType>();
 const extractText = computed(() => {
