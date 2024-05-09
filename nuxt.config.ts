@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/html-validator',
     '@nuxt/image',
+    'dayjs-nuxt',
   ],
   css: [
     '@unocss/reset/tailwind.css',
