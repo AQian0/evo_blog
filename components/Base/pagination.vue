@@ -7,7 +7,7 @@
       text-8
       type="button"
       @click="turnPage('up')"
-    ></button>
+    />
     <ul flex space-x-4>
       <li
         v-for="item in sizeList"
@@ -26,7 +26,7 @@
       text-8
       type="button"
       @click="turnPage('down')"
-    ></button>
+    />
   </div>
 </template>
 <script lang="ts" setup>

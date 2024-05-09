@@ -8,7 +8,7 @@
           cursor-pointer
           opacity-50
           @click="menuIcons[0].method"
-        ></div>
+        />
       </div>
       <div v-else space-y-3>
         <div
@@ -18,7 +18,7 @@
           cursor-pointer
           opacity-50
           @click="menuIcon.method"
-        ></div>
+        />
       </div>
     </Transition>
   </div>

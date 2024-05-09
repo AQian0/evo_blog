@@ -1,6 +1,6 @@
 <template>
   <div ref="postRef" flex="~ col" items-center>
-    <BasePageHeader></BasePageHeader>
+    <BasePageHeader />
     <div
       fixed
       left-0
@@ -11,12 +11,12 @@
       from-transparent
       to-zinc-100
       bg-gradient-to-t
-    ></div>
+    />
     <div mt-48 indent-2 text-10 tracking-0.5rem>{{ post?.title }}</div>
     <div relative my-6 w-192 text-5 class="content">
-      <div v-html="post?.content"></div>
+      <div v-html="post?.content" />
     </div>
-    <div w-192 flex justify-end font-italic text-zinc>
+    <div w-192 flex justify-end text-zinc font-italic>
       ——更新于{{ useDateText(post?.updatedAt) }}
     </div>
     <div
@@ -34,7 +34,7 @@
         cursor-pointer
         type="button"
         @click="item.method"
-      ></button>
+      />
     </div>
   </div>
 </template>

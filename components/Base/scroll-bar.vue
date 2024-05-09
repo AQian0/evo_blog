@@ -17,7 +17,7 @@
       bg-zinc-700
       transition
       :style="verticalScrollbarStyle"
-    ></div>
+    />
     <div
       absolute
       z-10
@@ -26,8 +26,8 @@
       bg-zinc-700
       transition
       :style="horizontalScrollbarStyle"
-    ></div>
-    <slot></slot>
+    />
+    <slot />
   </div>
 </template>
 <script lang="ts" setup>

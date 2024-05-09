@@ -21,7 +21,7 @@
         props.post.title
       }}</base-text>
       <base-text omitted group-hover:text-white>{{
-        props.post.time
+        props.post.updatedAt
       }}</base-text>
     </div>
     <base-text omitted group-hover:text-white>
@@ -33,7 +33,7 @@
 import type { Database } from '@/types';
 
 interface propsType {
-  post: Database.public.Tables.post.Row;
+  post: Database['public']['Tables']['post']['Row'];
 }
 const props = defineProps<propsType>();
 const extractText = computed(() => {

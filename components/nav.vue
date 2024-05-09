@@ -38,7 +38,7 @@
         cursor-pointer
         opacity-50
         @click="goExternal(icon.path)"
-      ></li>
+      />
     </ul>
   </div>
 </template>

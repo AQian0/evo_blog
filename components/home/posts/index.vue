@@ -1,7 +1,7 @@
 <template>
   <BaseScrollBar height="448px">
     <ul flex="~ col" space-y-3>
-      <slot></slot>
+      <slot />
     </ul>
   </BaseScrollBar>
 </template>

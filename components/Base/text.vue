@@ -1,6 +1,6 @@
 <template>
   <div :class="omittedClass">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 <script lang="ts" setup>

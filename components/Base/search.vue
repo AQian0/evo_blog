@@ -18,7 +18,7 @@
       cursor-pointer
       opacity-50
       @click="search"
-    ></div>
+    />
   </div>
 </template>
 <script lang="ts" setup>

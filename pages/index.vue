@@ -1,14 +1,14 @@
 <template>
   <div flex="~ col" items-center py-20 space-y-4>
     <home-posts>
-      <home-posts-post v-for="post in posts" :post="post"></home-posts-post>
+      <home-posts-post v-for="post in posts" :post="post" />
     </home-posts>
     <base-pagination
       :total="total"
       :page-size="pageSize"
       :current-page="currentPage"
       @change="changePage"
-    ></base-pagination>
+    />
   </div>
 </template>
 <script lang="ts" setup>
