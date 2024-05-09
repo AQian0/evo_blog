@@ -9,6 +9,14 @@ export default withNuxt([
       'vue/require-v-for-key': 'off',
       'vue/valid-v-for': 'off',
       'vue/no-v-html': 'off',
+      'vue/html-self-closing': [
+        'error',
+        {
+          html: {
+            void: 'always',
+          },
+        },
+      ],
     },
     ignores: ['node_modules/*', 'dist/*', '.nuxt/*'],
   },
