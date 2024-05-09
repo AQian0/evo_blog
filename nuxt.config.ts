@@ -13,13 +13,13 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    '@nuxtjs/eslint-module',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/supabase',
     '@nuxtjs/html-validator',
     '@nuxt/image',
     'dayjs-nuxt',
+    '@nuxt/eslint',
   ],
   css: [
     '@unocss/reset/tailwind.css',
