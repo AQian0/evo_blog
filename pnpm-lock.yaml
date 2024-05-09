@@ -9,7 +9,7 @@ dependencies:
     specifier: ^1.1.20
     version: 1.1.20
   '@nuxt/image':
-    specifier: ^1.3.0
+    specifier: ^1.7.0
     version: 1.7.0
   '@unocss/reset':
     specifier: ^0.53.6
