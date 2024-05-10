@@ -31,6 +31,7 @@
     "dayjs-nuxt": "^2.1.9",
     "eslint": "^9.2.0",
     "nuxt": "^3.11.2",
+    "nuxt-typed-router": "^3.6.3",
     "prettier": "^3.2.5"
   },
   "dependencies": {

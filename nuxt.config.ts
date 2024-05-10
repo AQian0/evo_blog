@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'dayjs-nuxt',
     '@nuxt/eslint',
+    'nuxt-typed-router',
   ],
   css: [
     '@unocss/reset/tailwind.css',
