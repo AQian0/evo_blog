@@ -20,9 +20,7 @@
       <base-text omitted group-hover:text-white>{{
         props.post.title
       }}</base-text>
-      <base-text omitted group-hover:text-white>{{
-        props.post.updatedAt
-      }}</base-text>
+      <base-text omitted group-hover:text-white>{{ time }}</base-text>
     </div>
     <base-text omitted group-hover:text-white>
       {{ extractText }}
@@ -36,6 +34,7 @@ interface propsType {
   post: Database['public']['Tables']['post']['Row'];
 }
 const props = defineProps<propsType>();
+const dayjs = useDayjs();
 const extractText = computed(() => {
   return (props.post.content as string)
     .replace(/<img\b[^>]*>/gi, '[图片]')
@@ -51,5 +50,8 @@ const goPost = async () => {
     },
   });
 };
+const time = computed(() => {
+  return dayjs(props.post.updatedAt).format('YYYY-MM-DD');
+});
 </script>
 <style scoped></style>

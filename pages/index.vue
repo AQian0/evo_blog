@@ -49,13 +49,7 @@ const { data: posts } = await useAsyncData(
     }
     const { data, error } = await query;
     if (error) throw error;
-    const posts = data.map(({ id, title, content, createdAt }) => ({
-      id,
-      title,
-      content,
-      time: createdAt.toString().split('T')[0],
-    }));
-    return posts;
+    return data;
   },
   {
     watch: [currentPage, () => route.query],
