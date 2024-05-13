@@ -34,7 +34,6 @@ interface propsType {
   post: Database['public']['Tables']['post']['Row'];
 }
 const props = defineProps<propsType>();
-const dayjs = useDayjs();
 const extractText = computed(() => {
   return (props.post.content as string)
     .replace(/<img\b[^>]*>/gi, '[图片]')
@@ -51,7 +50,7 @@ const goPost = async () => {
   });
 };
 const time = computed(() => {
-  return dayjs(props.post.updatedAt).format('YYYY-MM-DD');
+  return useDateText(props.post.updatedAt);
 });
 </script>
 <style scoped></style>
