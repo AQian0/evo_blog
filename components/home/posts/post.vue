@@ -20,7 +20,9 @@
       <base-text omitted group-hover:text-white>{{
         props.post.title
       }}</base-text>
-      <base-text omitted group-hover:text-white>{{ time }}</base-text>
+      <base-text omitted group-hover:text-white>{{
+        useDateText(props.post.updatedAt)
+      }}</base-text>
     </div>
     <base-text omitted group-hover:text-white>
       {{ extractText }}
@@ -49,8 +51,5 @@ const goPost = async () => {
     },
   });
 };
-const time = computed(() => {
-  return useDateText(props.post.updatedAt);
-});
 </script>
 <style scoped></style>
