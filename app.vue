@@ -2,7 +2,10 @@
   <div min-h-screen w-full flex bg-zinc-100>
     <Nav overflow-hidden />
     <NuxtLoadingIndicator :height="1" />
-    <NuxtPage class="flex-[3]" />
+    <div flex="~ col items-center" py-20 class="flex-[3]">
+      <NuxtPage w-full flex-1 />
+      <Footer />
+    </div>
     <div fixed right-6 top-4 z-10 flex text-6 space-x-2>
       <BaseSearch />
       <BaseMenu />

@@ -1,5 +1,5 @@
 <template>
-  <div flex="~ col" items-center justify-around gap-4 py-20>
+  <div flex="~ col" items-center justify-around gap-4>
     <home-posts>
       <home-posts-post v-for="post in posts" :post="post" />
     </home-posts>
