@@ -4,9 +4,10 @@
       <div v-if="!isMenuExpand">
         <div
           :class="menuIcons[0].label"
-          un-hover:opacity-100
           cursor-pointer
           opacity-50
+          transition
+          hover:opacity-100
           @click="menuIcons[0].method"
         />
       </div>
@@ -14,9 +15,9 @@
         <div
           v-for="menuIcon in menuIcons.slice(1)"
           :class="menuIcon.label"
-          un-hover:opacity-100
           cursor-pointer
           opacity-50
+          hover:opacity-100
           @click="menuIcon.method"
         />
       </div>

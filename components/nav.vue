@@ -22,9 +22,10 @@
     <ul flex="~ col" mb-8 space-y-4>
       <li
         v-for="option in nav"
-        un-hover:opacity-100
         cursor-pointer
         opacity-50
+        transition
+        hover:opacity-100
         @click="option.method"
       >
         {{ option.label }}
@@ -34,9 +35,10 @@
       <li
         v-for="icon in icons"
         :class="icon.label"
-        un-hover:opacity-100
         cursor-pointer
         opacity-50
+        transition
+        hover:opacity-100
         @click="goExternal(icon.path)"
       />
     </ul>
