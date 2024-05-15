@@ -1,9 +1,9 @@
 <template>
   <div
     flex="~ col"
+    evo-nav-bg-color
     items-center
     justify-center
-    bg-neutral-100
     shadow-lg
     transition-flex
     :style="{

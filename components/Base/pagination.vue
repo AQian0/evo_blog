@@ -1,7 +1,11 @@
 <template>
   <div w-48 flex items-center justify-between>
     <button
-      :class="currentPage > 1 ? '' : ['text-zinc', 'cursor-not-allowed']"
+      :class="
+        currentPage > 1
+          ? ''
+          : ['evo-pagination-text-color', 'cursor-not-allowed']
+      "
       :disabled="currentPage <= 1"
       i-ri-arrow-left-s-fill
       text-8
@@ -12,14 +16,16 @@
       <li
         v-for="item in sizeList"
         cursor-pointer
-        :class="currentPage === item ? '' : 'text-zinc'"
+        :class="currentPage === item ? '' : 'evo-pagination-text-color'"
       >
         {{ item }}
       </li>
     </ul>
     <button
       :class="
-        currentPage < sizeList.length ? '' : ['text-zinc', 'cursor-not-allowed']
+        currentPage < sizeList.length
+          ? ''
+          : ['evo-pagination-text-color', 'cursor-not-allowed']
       "
       :disabled="currentPage >= sizeList.length"
       i-ri-arrow-right-s-fill

@@ -10,20 +10,20 @@
     }"
   >
     <div
+      evo-scrollbar-bg-color
       absolute
       z-10
       w-1
       rounded-full
-      bg-zinc-700
       transition
       :style="verticalScrollbarStyle"
     />
     <div
+      evo-scrollbar-bg-color
       absolute
       z-10
       h-1
       rounded-full
-      bg-zinc-700
       transition
       :style="horizontalScrollbarStyle"
     />

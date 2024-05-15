@@ -1,5 +1,5 @@
 <template>
-  <div min-h-screen w-full flex bg-zinc-100>
+  <div min-h-screen w-full flex evo-primary-bg-color>
     <Nav overflow-hidden />
     <NuxtLoadingIndicator :height="1" />
     <div flex="~ col items-center" py-20 class="flex-[3]">

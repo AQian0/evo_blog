@@ -16,7 +16,7 @@
     <div relative my-6 w-192 text-5 class="content">
       <div v-html="post?.content" />
     </div>
-    <div w-192 flex justify-end text-zinc font-italic>
+    <div evo-post-date-text-color w-192 flex justify-end font-italic>
       ——更新于{{ useDateText(post?.updatedAt) }}
     </div>
     <div
