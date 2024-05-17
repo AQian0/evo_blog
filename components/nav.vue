@@ -1,10 +1,10 @@
 <template>
   <div
     flex="~ col"
-    evo-nav-bg-color
+    evo-primary-shadow
     items-center
     justify-center
-    shadow-lg
+    evo-nav-bg-color
     transition-flex
     :style="{
       '--isRoot': route.path === '/' ? '1' : '0',

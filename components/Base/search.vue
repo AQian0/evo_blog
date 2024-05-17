@@ -5,6 +5,7 @@
       v-model="searchContent"
       type="text"
       :placeholder="placeholder"
+      evo-input-bg-color
       w-72
       px-2
       py-1
