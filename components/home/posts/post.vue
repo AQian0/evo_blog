@@ -2,17 +2,17 @@
   <li
     flex="~ col"
     group
-    evo-post-bg-color
-    evo-post-border-color
     h-20
     w-160
     cursor-pointer
     justify-between
     border-2
+    evo-post-border-color
     rounded
     px-3
     py-2
     transition
+    evo-post-bg-color
     @click="goPost"
   >
     <div flex justify-between text-5>
