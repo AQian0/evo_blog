@@ -1,22 +1,12 @@
 <template>
   <div ref="postRef" flex="~ col" items-center>
     <BasePageHeader />
-    <div
-      fixed
-      left-0
-      top-0
-      z-1
-      h-52
-      w-full
-      from-transparent
-      to-zinc-100
-      bg-gradient-to-t
-    />
+    <div evo-post-mask fixed left-0 top-0 z-1 h-52 w-full bg-gradient-to-t />
     <div mt-48 indent-2 text-10 tracking-0.5rem>{{ post?.title }}</div>
     <div relative my-6 w-192 text-5 class="content">
       <div v-html="post?.content" />
     </div>
-    <div evo-post-date-text-color w-192 flex justify-end font-italic>
+    <div w-192 flex justify-end font-italic evo-post-date-text-color>
       ——更新于{{ useDateText(post?.updatedAt) }}
     </div>
     <div

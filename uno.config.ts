@@ -8,7 +8,7 @@ import {
 export default defineConfig({
   shortcuts: {
     'evo-primary-text-color': 'text-black dark:text-white',
-    'evo-primary-bg-color': 'bg-zinc-100 dark:bg-zinc-900 transition',
+    'evo-primary-bg-color': 'bg-zinc-100 dark:bg-zinc-900',
     'evo-scrollBar-bg-color': 'bg-zinc-700 dark:bg-zinc-300',
     'evo-post-bg-color':
       'bg-zinc-50 hover:bg-zinc-300 dark:bg-zinc-950 dark:hover:bg-zinc-700',
@@ -16,6 +16,7 @@ export default defineConfig({
     'evo-post-text-color':
       'group-hover:text-white dark:text-zinc-100 dark:group-hover:text-black',
     'evo-post-date-text-color': 'text-zinc dark:text-zinc-600',
+    'evo-post-mask': 'from-transparent  to-zinc-100 dark:to-zinc-900',
     'evo-nav-bg-color': 'bg-neutral-100 dark:bg-neutral-900',
     'evo-pagination-text-color': 'text-zinc dark:text-zinc-600',
     // 无法单独设定自定义阴影颜色
