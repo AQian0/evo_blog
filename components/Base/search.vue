@@ -5,10 +5,10 @@
       v-model="searchContent"
       type="text"
       :placeholder="placeholder"
-      evo-input-bg-color
       w-72
       px-2
       py-1
+      evo-input-bg-color
     />
     <div
       i-ri-search-line

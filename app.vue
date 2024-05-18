@@ -1,14 +1,14 @@
 <template>
-  <div min-h-screen w-full flex evo-primary-bg-color>
+  <div min-h-screen w-full flex evo-primary-bg-color evo-primary-text-color>
     <Nav overflow-hidden />
     <NuxtLoadingIndicator :height="1" />
     <div flex="~ col items-center" py-20 class="flex-[3]">
       <NuxtPage w-full flex-1 />
       <Footer />
     </div>
-    <div fixed right-6 top-4 z-10 flex text-6 space-x-2>
+    <div fixed right-6 top-4 z-10 flex gap-4 text-6>
       <BaseSearch />
-      <BaseMenu />
+      <BaseThemeButton />
     </div>
   </div>
 </template>
