@@ -1,7 +1,7 @@
 <template>
   <div ref="postRef" flex="~ col" items-center>
     <BasePageHeader />
-    <div evo-post-mask fixed left-0 top-0 z-1 h-52 w-full bg-gradient-to-t />
+    <div fixed left-0 top-0 z-1 h-52 w-full bg-gradient-to-t evo-post-mask />
     <div mt-48 indent-2 text-10 tracking-0.5rem>{{ post?.title }}</div>
     <div relative my-6 w-192 text-5 class="content">
       <div v-html="post?.content" />

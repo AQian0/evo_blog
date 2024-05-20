@@ -1,11 +1,11 @@
 <template>
   <div
     flex="~ col"
-    evo-primary-shadow
     items-center
     justify-center
-    evo-nav-bg-color
     transition-flex
+    evo-nav-bg-color
+    evo-primary-shadow
     :style="{
       '--isRoot': route.path === '/' ? '1' : '0',
       flex: 'var(--isRoot)',
