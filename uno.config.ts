@@ -23,6 +23,8 @@ export default defineConfig({
     'evo-primary-shadow':
       'shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_15px_-3px_rgba(255,255,255,0.1),0_4px_6px_-4px_rgba(255,255,255,0.1)]',
     'evo-input-bg-color': 'bg-white dark:bg-black',
+    'evo-log-bg-color': 'bg-zinc-200 dark:bg-zinc-800',
+    'evo-button-bg-color': 'bg-neutral-400 dark:bg-neutral-600',
   },
   presets: [
     presetUno({
