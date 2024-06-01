@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'evo_blog',
+      title: 'Evo Blog',
       htmlAttrs: {
         lang: 'zh-CN',
       },
