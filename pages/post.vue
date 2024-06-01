@@ -67,5 +67,8 @@ const { data: post } = await useAsyncData('post', async () => {
 onMounted(() => {
   hljs.highlightAll();
 });
+useHead({
+  title: `Evo Blog | ${post?.value?.title}`,
+});
 </script>
 <style scoped></style>
