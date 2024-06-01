@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="!isRoot"
-    fixed
+    absolute
     left-6
     top-4
     z-10

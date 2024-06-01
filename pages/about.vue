@@ -1,6 +1,5 @@
 <template>
   <div flex="~ col" items-center py-16 space-y-4>
-    <BasePageHeader />
     <div text-6>关于</div>
     <div flex="~ col" space-y-2>
       <div v-for="info in infoList" inline-flex>

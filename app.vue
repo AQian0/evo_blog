@@ -2,7 +2,8 @@
   <div min-h-screen w-full flex evo-primary-bg-color evo-primary-text-color>
     <Nav overflow-hidden />
     <NuxtLoadingIndicator :height="1" />
-    <div flex="~ col items-center" py-20 class="flex-[3]">
+    <div flex="~ col  [3]" relative items-center py-20>
+      <BasePageHeader />
       <NuxtPage w-full flex-1 />
       <Footer />
     </div>
@@ -22,15 +23,5 @@
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>
