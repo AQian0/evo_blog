@@ -16,6 +16,7 @@
     }
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.2",
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
     "@nuxt/devtools": "latest",
