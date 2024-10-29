@@ -48,7 +48,6 @@
 import type { Database } from '~/types';
 
 const route = useRoute();
-const client = useSupabaseClient<Database>();
 const nav = ref([
   {
     label: '关于',
@@ -82,9 +81,7 @@ const icons = ref([
   },
 ]);
 const { data: profile } = await useAsyncData('profile', async () => {
-  const { data, error } = await client.from('profile').select('*');
-  if (error) throw error;
-  return data[0];
+  return [];
 });
 const goExternal = async (path: string) => {
   await navigateTo(path, {

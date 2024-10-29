@@ -28,11 +28,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import type { Database } from '@/types';
 import hljs from 'highlight.js';
 
 const route = useRoute();
-const client = useSupabaseClient<Database>();
 const postRef = ref();
 const { height: postHeight } = useElementSize(postRef);
 const { height: windowHeight } = useWindowSize();
@@ -57,12 +55,7 @@ const extendedList = ref([
   },
 ]);
 const { data: post } = await useAsyncData('post', async () => {
-  const { data, error } = await client
-    .from('post')
-    .select('*')
-    .eq('id', route.query.id as string);
-  if (error) throw error;
-  return data[0];
+  return [];
 });
 onMounted(() => {
   hljs.highlightAll();

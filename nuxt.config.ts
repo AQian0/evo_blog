@@ -15,7 +15,6 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/supabase',
     '@nuxtjs/html-validator',
     '@nuxt/image',
     'dayjs-nuxt',
