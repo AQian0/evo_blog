@@ -45,8 +45,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import type { Database } from '~/types';
-
 const route = useRoute();
 const nav = ref([
   {

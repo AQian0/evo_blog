@@ -27,12 +27,7 @@
   </li>
 </template>
 <script lang="ts" setup>
-import type { Database } from '@/types';
-
-interface propsType {
-  post: Database['public']['Tables']['post']['Row'];
-}
-const props = defineProps<propsType>();
+const props = defineProps();
 const extractText = computed(() => {
   return (props.post.content as string)
     .replace(/<img\b[^>]*>/gi, '[图片]')
