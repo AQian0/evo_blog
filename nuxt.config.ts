@@ -28,9 +28,6 @@ export default defineNuxtConfig({
     'highlight.js/styles/github-dark.min.css',
   ],
   devtools: { enabled: true },
-  supabase: {
-    redirect: false,
-  },
   typescript: {
     strict: true,
   },
