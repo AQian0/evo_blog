@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: 'HarmonyOS_Sans_Regular';
   src: url('~/assets/fonts/HarmonyOS_Sans_Regular.ttf');

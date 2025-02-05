@@ -1,13 +1,13 @@
 <template>
-  <div min-h-screen w-full flex evo-primary-bg-color evo-primary-text-color>
-    <Nav overflow-hidden />
+  <div class="min-h-screen w-full flex">
+    <Nav class="overflow-hidden" />
     <NuxtLoadingIndicator :height="1" />
-    <div flex="~ col  [3]" relative items-center py-20>
+    <div class="flex flex-col flex-3 relative items-center py-20">
       <BasePageHeader />
-      <NuxtPage w-full flex-1 />
+      <NuxtPage class="w-full flex-1" />
       <Footer />
     </div>
-    <div fixed right-6 top-4 z-10 flex gap-4 text-6>
+    <div class="fixed right-6 top-4 z-10 flex gap-4 text-2xl">
       <BaseSearch />
       <BaseThemeButton />
     </div>

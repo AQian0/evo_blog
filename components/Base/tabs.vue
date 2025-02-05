@@ -1,11 +1,8 @@
 <template>
-  <div flex gap-6 font-bold>
+  <div class="flex gap-6 font-bold">
     <span
       v-for="tab in props.tabs"
-      cursor-pointer
-      text-6
-      transition
-      hover:opacity-80
+      class="cursor-pointer text-2xl transition hover:opacity-80"
       :class="selectedValue === tab.value ? 'opacity-80' : 'opacity-40'"
       @click="select(tab.value)"
       >{{ tab.label }}</span

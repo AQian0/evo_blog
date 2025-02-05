@@ -1,27 +1,15 @@
 <template>
   <li
-    flex="~ col"
-    group
-    h-20
-    w-160
-    cursor-pointer
-    justify-between
-    border-2
-    evo-post-border-color
-    rounded
-    px-3
-    py-2
-    transition
-    evo-post-bg-color
+    class="flex flex-col group h-20 w-160 cursor-pointer justify-between border-2 rounded px-3 py-2 transition"
     @click="goPost"
   >
-    <div flex justify-between text-5>
-      <base-text omitted evo-post-text-color>{{ props.post.title }}</base-text>
-      <base-text omitted evo-post-text-color>{{
+    <div class="flex justify-between text-xl">
+      <base-text omitted>{{ props.post.title }}</base-text>
+      <base-text omitted>{{
         useDateText(props.post.updatedAt)
       }}</base-text>
     </div>
-    <base-text omitted evo-post-text-color>
+    <base-text omitted>
       {{ extractText }}
     </base-text>
   </li>

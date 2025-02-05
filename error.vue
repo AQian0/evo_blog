@@ -1,38 +1,23 @@
 <template>
-  <div
-    flex="~ col"
-    h-screen
-    w-full
-    gap-2
-    p-12
-    evo-primary-bg-color
-    evo-primary-text-color
-  >
-    <div text-12 font-bold>似乎遇到了一些问题……</div>
-    <div flex items-center text-8>
+  <div class="flex flex-col h-screen w-full gap-2 p-12">
+    <div class="text-[3rem] font-bold">似乎遇到了一些问题……</div>
+    <div class="flex items-center text-[2rem]">
       <span>错误代码：</span>
       <span :class="getCodeColor(props.error.statusCode)">{{
         props.error.statusCode
       }}</span>
-      <div ml-auto flex items-center gap-2 text-6>
+      <div class="ml-auto flex items-center gap-2 text-2xl">
         <button
           v-for="button in buttonGroup"
-          flex
-          items-center
-          justify-center
-          gap-2
-          rounded-full
-          p-2
-          text-white
-          evo-button-bg-color
+          class="flex items-center justify-center gap-2 rounded-full p-2 text-white"
           @click="button.method"
         >
           <Icon :name="button.icon" />
         </button>
       </div>
     </div>
-    <div flex-1 rounded evo-log-bg-color>
-      <BaseScrollBar flex="~ col" gap-2 p-4>
+    <div class="flex-1 rounded">
+      <BaseScrollBar class="flex flex-col gap-2 p-4">
         <span>信息：{{ props.error.message }}</span>
         <span v-if="props.error?.statusMessage"
           >状态信息：{{ props.error?.statusMessage }}</span

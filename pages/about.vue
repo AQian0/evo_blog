@@ -1,9 +1,9 @@
 <template>
-  <div flex="~ col" items-center py-16 space-y-4>
-    <div text-6>关于</div>
-    <div flex="~ col" space-y-2>
-      <div v-for="info in infoList" inline-flex>
-        <div w-16>{{ info.label }}：</div>
+  <div class="flex flex-col items-center py-16 space-y-4">
+    <div class="text-2xl">关于</div>
+    <div class="flex flex-col space-y-2">
+      <div v-for="info in infoList" class="inline-flex">
+        <div class="w-16">{{ info.label }}：</div>
         <NuxtLink :to="info.path">{{ info.name }}</NuxtLink>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite" 
+ 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -13,8 +15,13 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+
   modules: [
-    '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/html-validator',
     '@nuxt/image',
@@ -25,7 +32,6 @@ export default defineNuxtConfig({
   ],
 
   css: [
-    '@unocss/reset/tailwind.css',
     '~/assets/base.css',
     '~/assets/content.css',
     'highlight.js/styles/github-dark.min.css',

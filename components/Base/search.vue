@@ -1,22 +1,14 @@
 <template>
-  <div relative m--1 h-fit overflow-hidden border rounded-1 text-4>
+  <div class="relative -m-1 h-fit overflow-hidden border rounded-sm text-base">
     <input
       ref="input"
       v-model="searchContent"
       type="text"
       :placeholder="placeholder"
-      w-72
-      px-2
-      py-1
-      evo-input-bg-color
+      class="w-72 px-2 py-1"
     />
     <button
-      absolute
-      right-2
-      top="50%"
-      translate-y="-50%"
-      cursor-pointer
-      opacity-50
+      class="absolute right-2 top-[50%] translate-y-[-50%] cursor-pointer opacity-50"
       @click="search"
     >
       <Icon name="i-ri-search-line" />

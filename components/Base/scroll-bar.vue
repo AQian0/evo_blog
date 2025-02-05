@@ -1,30 +1,18 @@
 <template>
   <div
     ref="scrollContainerRef"
-    relative
-    overflow-auto
-    border-gray-300
+    class="relative overflow-auto border-gray-300"
     :style="{
       height: props.height || 'auto',
       width: props.width || 'auto',
     }"
   >
     <div
-      evo-scrollbar-bg-color
-      absolute
-      z-10
-      w-1
-      rounded-full
-      transition
+      class="absolute z-10 w-1 rounded-full transition"
       :style="verticalScrollbarStyle"
     />
     <div
-      evo-scrollbar-bg-color
-      absolute
-      z-10
-      h-1
-      rounded-full
-      transition
+      class="absolute z-10 h-1 rounded-full transition"
       :style="horizontalScrollbarStyle"
     />
     <slot />

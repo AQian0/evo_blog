@@ -1,43 +1,29 @@
 <template>
   <div
-    flex="~ col"
-    items-center
-    justify-center
-    transition-flex
-    evo-nav-bg-color
-    evo-primary-shadow
+    class="flex flex-col items-center justify-center transition-flex"
     :style="{
       '--isRoot': route.path === '/' ? '1' : '0',
       flex: 'var(--isRoot)',
     }"
   >
     <nuxt-img
-      mb-16
-      aspect-square
-      w-64
-      rounded-full
+      class="mb-16 aspect-square w-64 rounded-full"
       :src="profile?.avatar"
       alt="avatar"
     />
-    <ul flex="~ col" mb-8 space-y-4>
+    <ul class="flex flex-col mb-8 space-y-4">
       <li
         v-for="option in nav"
-        cursor-pointer
-        opacity-50
-        transition
-        hover:opacity-100
+        class="cursor-pointer opacity-50 transition hover:opacity-100"
         @click="option.method"
       >
         {{ option.label }}
       </li>
     </ul>
-    <ul flex text-6 space-x-4>
+    <ul class="flex text-2xl space-x-4">
       <li
         v-for="icon in icons"
-        cursor-pointer
-        opacity-50
-        transition
-        hover:opacity-100
+        class="cursor-pointer opacity-50 transition hover:opacity-100"
         @click="goExternal(icon.path)"
       >
         <Icon :name="icon.label" />

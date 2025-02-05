@@ -1,23 +1,23 @@
 <template>
-  <div w-48 flex items-center justify-between>
+  <div class="w-48 flex items-center justify-between">
     <button
       :class="
         currentPage > 1
           ? ''
-          : ['evo-pagination-text-color', 'cursor-not-allowed']
+          : ['cursor-not-allowed']
       "
       :disabled="currentPage <= 1"
-      text-8
+      class="text-[2rem]"
       type="button"
       @click="turnPage('up')"
     >
       <Icon name="i-ri-arrow-left-s-fill" />
     </button>
-    <ul flex space-x-4>
+    <ul class="flex space-x-4">
       <li
         v-for="item in sizeList"
-        cursor-pointer
-        :class="currentPage === item ? '' : 'evo-pagination-text-color'"
+        class="cursor-pointer"
+        :class="currentPage === item ? '' : ''"
       >
         {{ item }}
       </li>
@@ -26,10 +26,10 @@
       :class="
         currentPage < sizeList.length
           ? ''
-          : ['evo-pagination-text-color', 'cursor-not-allowed']
+          : ['', 'cursor-not-allowed']
       "
       :disabled="currentPage >= sizeList.length"
-      text-8
+      class="text-[2rem]"
       type="button"
       @click="turnPage('down')"
     >
