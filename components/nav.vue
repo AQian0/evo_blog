@@ -34,13 +34,14 @@
     <ul flex text-6 space-x-4>
       <li
         v-for="icon in icons"
-        :class="icon.label"
         cursor-pointer
         opacity-50
         transition
         hover:opacity-100
         @click="goExternal(icon.path)"
-      />
+      >
+        <Icon :name="icon.label" />
+      </li>
     </ul>
   </div>
 </template>

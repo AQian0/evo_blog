@@ -12,6 +12,7 @@ export default defineNuxtConfig({
       mode: 'out-in',
     },
   },
+
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',
@@ -20,17 +21,22 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/eslint',
     'nuxt-typed-router',
+    '@nuxt/icon',
   ],
+
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/base.css',
     '~/assets/content.css',
     'highlight.js/styles/github-dark.min.css',
   ],
+
   devtools: { enabled: true },
+
   typescript: {
     strict: true,
   },
+
   htmlValidator: {
     options: {
       rules: {
@@ -38,4 +44,12 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  icon: {
+    serverBundle: {
+      collections: ['ri']
+    }
+  },
+
+  compatibilityDate: '2025-02-05',
 });

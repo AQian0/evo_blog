@@ -1,8 +1,12 @@
 <template>
   <div cursor-pointer opacity-50 transition hover:opacity-100>
     <Transition name="fade" mode="out-in" @click="toggleDark(!isDark)">
-      <div v-if="!isDark" i-ri-sun-fill />
-      <div v-else i-ri-moon-fill />
+      <button v-if="!isDark">
+        <Icon name="i-ri-sun-fill" />
+      </button>
+      <button v-else>
+        <Icon name="i-ri-moon-fill" />
+      </button>
     </Transition>
   </div>
 </template>

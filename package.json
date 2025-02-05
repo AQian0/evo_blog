@@ -20,6 +20,7 @@
     "@commitlint/config-conventional": "^17.8.1",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/icon": "1.10.3",
     "@nuxtjs/html-validator": "^1.8.2",
     "@types/node": "^18.19.75",
     "@unocss/eslint-config": "^0.60.4",

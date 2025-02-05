@@ -27,7 +27,7 @@
           evo-button-bg-color
           @click="button.method"
         >
-          <div :class="button.icon" />
+          <Icon :name="button.icon" />
         </button>
       </div>
     </div>

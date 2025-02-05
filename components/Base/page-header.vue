@@ -14,7 +14,9 @@
     hover:opacity-100
     @click="goBack"
   >
-    <div i-ri-arrow-left-double-fill text-8 />
+    <button text-8>
+      <Icon name="i-ri-arrow-left-double-fill" />
+    </button>
     <div>返回</div>
   </div>
 </template>

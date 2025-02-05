@@ -10,8 +10,7 @@
       py-1
       evo-input-bg-color
     />
-    <div
-      i-ri-search-line
+    <button
       absolute
       right-2
       top="50%"
@@ -19,7 +18,9 @@
       cursor-pointer
       opacity-50
       @click="search"
-    />
+    >
+      <Icon name="i-ri-search-line" />
+    </button>
   </div>
 </template>
 <script lang="ts" setup>
