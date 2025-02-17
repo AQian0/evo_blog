@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     '~/assets/base.css',
     '~/assets/content.css',
     'highlight.js/styles/github-dark.min.css',
+    'overlayscrollbars/overlayscrollbars.css',
   ],
 
   devtools: { enabled: true },
@@ -55,6 +56,19 @@ export default defineNuxtConfig({
     serverBundle: {
       collections: ['ri']
     }
+  },
+
+  imports: {
+    presets: [
+      {
+        from: 'overlayscrollbars',
+        imports: ['OverlayScrollbars', 'ScrollbarsHidingPlugin', 'SizeObserverPlugin', 'ClickScrollPlugin'],
+      },
+      {
+        from: 'overlayscrollbars-vue',
+        imports: ['OverlayScrollbarsComponent', 'useOverlayScrollbars'],
+      }
+    ],
   },
 
   compatibilityDate: '2025-02-05',

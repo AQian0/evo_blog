@@ -17,14 +17,14 @@
       </div>
     </div>
     <div class="flex-1 rounded">
-      <BaseScrollBar class="flex flex-col gap-2 p-4">
+      <OverlayScrollbarsComponent defer class="flex flex-col gap-2 p-4">
         <span>信息：{{ props.error.message }}</span>
         <span v-if="props.error?.statusMessage"
           >状态信息：{{ props.error?.statusMessage }}</span
         >
         <span v-if="props.error?.data">数据：{{ props.error?.data }}</span>
         <span v-if="props.error?.cause">原因：{{ props.error?.cause }}</span>
-      </BaseScrollBar>
+      </OverlayScrollbarsComponent>
     </div>
   </div>
 </template>
