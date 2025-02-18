@@ -29,6 +29,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'nuxt-typed-router',
     '@nuxt/icon',
+    '@pinia/nuxt',
+    '@pinia/colada-nuxt',
   ],
 
   css: [

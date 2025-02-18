@@ -22,6 +22,8 @@
     "@nuxt/eslint": "^1.0.1",
     "@nuxt/icon": "1.10.3",
     "@nuxtjs/html-validator": "^1.8.2",
+    "@pinia/colada": "^0.13.6",
+    "@pinia/colada-nuxt": "0.0.5",
     "@types/bun": "^1.2.2",
     "@types/node": "^22.13.4",
     "@vueuse/core": "^12.7.0",
@@ -37,12 +39,14 @@
   "dependencies": {
     "@iconify-json/ri": "^1.2.5",
     "@nuxt/image": "^1.9.0",
+    "@pinia/nuxt": "^0.10.1",
     "@tailwindcss/vite": "^4.0.6",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.3",
     "highlight.js": "^11.11.1",
     "overlayscrollbars": "^2.11.0",
     "overlayscrollbars-vue": "^0.5.9",
+    "pinia": "^3.0.1",
     "tailwindcss": "^4.0.6"
   }
 }
