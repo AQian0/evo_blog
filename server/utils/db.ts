@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/bun-sql';
+import { drizzle } from 'drizzle-orm/postgres-js';
 
 
 export const useDrizzle = drizzle({
