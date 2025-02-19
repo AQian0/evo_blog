@@ -68,7 +68,7 @@ export default defineNuxtConfig({
       },
       {
         from: 'overlayscrollbars-vue',
-        imports: ['OverlayScrollbarsComponent', 'useOverlayScrollbars'],
+        imports: ['useOverlayScrollbars'],
       }
     ],
   },
