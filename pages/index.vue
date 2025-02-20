@@ -2,26 +2,26 @@
   <div class="flex flex-col relative items-center justify-around gap-4">
     <BaseTabs v-model="type" :tabs="tabs" class="absolute left-6 top--18 blur-0.3" />
     <home-posts>
-      <home-posts-post v-for="post in posts" :post="post" />
+      <home-posts-post v-for="post in posts" :post />
     </home-posts>
     <base-pagination
-      :total="total"
-      :page-size="pageSize"
-      :current-page="currentPage"
+      :total="totalCount"
+      :page-size="perPage"
+      :current-page="page"
       @change="changePage"
     />
   </div>
 </template>
 <script lang="ts" setup>
 const route = useRoute();
-const currentPage = ref(1);
-const pageSize = ref(10);
-const changePage = (page: number) => {
-  currentPage.value = page;
+const totalCount = ref(10);
+const page = ref(1);
+const perPage = ref(10);
+const changePage = (index: number) => {
+  page.value = index;
 };
 const type = ref((route.query.type as string | undefined) || '');
-watch(
-  () => type.value,
+watch(() => type.value,
   async () => {
     if (type.value) {
       await navigateTo({
@@ -49,17 +49,22 @@ const tabs = ref([
     value: 'book',
   },
 ]);
-const { data: total } = await useAsyncData('total', async () => {
-  return []
-});
-
-const { data: posts } = await useAsyncData(
-  'posts',
-  async () => {
-    return [];
-  },
+const { data: posts } = await useFetch('/api/posts',  
   {
-    watch: [currentPage, () => route.query],
+    query: {
+      page: page.value,
+      perPage: perPage.value,
+    },
+    watch: [page, () => route.query],
+    transform: (posts) => posts.map(post => ({
+      postId: post.postId,
+      title: post.title,
+      content: post.content,
+      updatedAt: post.updatedAt,
+    })),
+    onResponse: ({response}) => {
+      totalCount.value = Number(response.headers.get('X-Total-Count')!)
+    }
   },
 );
 </script>
