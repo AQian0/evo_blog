@@ -11,8 +11,8 @@ export const posts = pgTable('posts', {
   postId: serial('post_id').primaryKey(),
   title: varchar({ length: 255 }).notNull(),
   content: text().notNull(),
-  createdAt: timestamp('created_at').defaultNow(),
-  updatedAt: timestamp('updated_at').defaultNow().$onUpdate(() => new Date()),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull().$onUpdate(() => new Date()),
   categoryId: integer('category_id').references(() => categories.categoryId),
   authorId: integer('author_id').references(() => users.userId).notNull(),
 });
