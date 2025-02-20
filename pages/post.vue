@@ -50,14 +50,13 @@ const extendedList = ref([
     method: () => {},
   },
 ]);
-const { data: post } = await useAsyncData('post', async () => {
-  return [];
-});
+
+const { data: post } = useFetch(`/api/posts/${route.query.postId}`)
 onMounted(() => {
   hljs.highlightAll();
 });
 useHead({
-  title: `Evo Blog | ${post?.value?.title}`,
+  title: `Evo Blog | ${post.value?.title}`,
 });
 </script>
 <style scoped></style>

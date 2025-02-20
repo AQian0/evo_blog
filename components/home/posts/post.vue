@@ -36,7 +36,7 @@ const goPost = async () => {
   await navigateTo({
     path: '/post',
     query: {
-      id: post.postId,
+      postId: post.postId,
     },
   });
 };
