@@ -1,5 +1,5 @@
 <template>
-  <div class="relative -m-1 h-fit overflow-hidden border rounded-sm text-base">
+  <div class="relative h-fit overflow-hidden border rounded-sm text-base">
     <input
       ref="input"
       v-model="searchContent"
