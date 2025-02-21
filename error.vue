@@ -6,13 +6,13 @@
       <span :class="getCodeColor(props.error.statusCode)">{{
         props.error.statusCode
       }}</span>
-      <div class="ml-auto flex items-center gap-2 text-2xl">
+      <div class="ml-auto flex items-center gap-2">
         <button
           v-for="button in buttonGroup"
           class="flex items-center justify-center gap-2 rounded-full p-2 text-white"
           @click="button.method"
         >
-          <Icon :name="button.icon" />
+          <Icon size="1.5rem" :name="button.icon" />
         </button>
       </div>
     </div>

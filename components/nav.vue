@@ -20,13 +20,13 @@
         {{ option.label }}
       </li>
     </ul>
-    <ul class="flex text-2xl space-x-4">
+    <ul class="flex space-x-4 leading-0">
       <li
         v-for="icon in icons"
         class="cursor-pointer opacity-50 transition hover:opacity-100"
         @click="goExternal(icon.path)"
       >
-        <Icon :name="icon.label" />
+        <Icon size="1.5rem" :name="icon.label" />
       </li>
     </ul>
   </div>

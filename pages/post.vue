@@ -9,7 +9,7 @@
       ——更新于{{ useDateText(post?.updatedAt) }}
     </div>
     <div
-      class="flex flex-col fixed text-2xl transition space-y-4 left-[86%] top-[70%]"
+      class="flex flex-col fixed transition space-y-4 left-[86%] top-[70%]"
       :style="`opacity: ${extendedListOpacity}`"
     >
       <button
@@ -18,7 +18,7 @@
         type="button"
         @click="item.method"
       >
-        <Icon :name="item.label" />
+        <Icon size="1.5rem" :name="item.label" />
       </button>
     </div>
   </div>

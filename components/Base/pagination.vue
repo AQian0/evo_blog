@@ -1,5 +1,5 @@
 <template>
-  <div class="w-48 flex items-center justify-between">
+  <div class="w-48 flex items-center justify-between leading-0">
     <button
       :class="
         currentPage > 1
@@ -7,11 +7,10 @@
           : ['cursor-not-allowed', 'opacity-50']
       "
       :disabled="currentPage <= 1"
-      class="text-[2rem]"
       type="button"
       @click="turnPage('up')"
     >
-      <Icon name="i-ri-arrow-left-s-fill" />
+      <Icon size="2rem" name="i-ri-arrow-left-s-fill" />
     </button>
     <ul class="flex space-x-4">
       <li
@@ -29,11 +28,10 @@
           : ['cursor-not-allowed', 'opacity-50']
       "
       :disabled="currentPage >= sizeList.length"
-      class="text-[2rem]"
       type="button"
       @click="turnPage('down')"
     >
-      <Icon name="i-ri-arrow-right-s-fill" />
+      <Icon size="2rem" name="i-ri-arrow-right-s-fill" />
     </button>
   </div>
 </template>

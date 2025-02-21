@@ -7,7 +7,7 @@
       <NuxtPage class="w-full flex-1" />
       <Footer />
     </div>
-    <div class="fixed right-6 top-4 z-10 flex gap-4 text-2xl">
+    <div class="fixed right-6 top-4 z-10 flex items-center gap-4 text-2xl">
       <BaseSearch />
       <BaseThemeButton />
     </div>

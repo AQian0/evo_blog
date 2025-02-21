@@ -1,5 +1,5 @@
 <template>
-  <div class="cursor-pointer opacity-50 transition hover:opacity-100">
+  <div class="opacity-50 transition hover:opacity-100 leading-0">
     <Transition name="fade" mode="out-in" @click="toggleDark(!isDark)">
       <button v-if="!isDark">
         <Icon name="i-ri-sun-fill" />
