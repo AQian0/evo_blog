@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col relative items-center justify-around gap-4">
-    <BaseTabs v-model="type" :tabs="tabs" class="absolute left-6 top--18 blur-0.3" />
+    <BaseTabs v-model="type" :tabs="tabs" class="absolute left-6 -top-16 blur-0.3" />
     <home-posts>
       <home-posts-post v-for="post in posts" :post />
     </home-posts>
