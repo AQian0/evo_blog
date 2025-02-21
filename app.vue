@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen w-full flex">
-    <Nav class="overflow-hidden" />
+  <div class="min-h-screen w-full flex bg-stone-100">
+    <Nav />
     <NuxtLoadingIndicator :height="1" />
     <div class="flex flex-col flex-3 relative items-center py-20">
       <BasePageHeader />

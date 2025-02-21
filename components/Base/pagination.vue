@@ -4,7 +4,7 @@
       :class="
         currentPage > 1
           ? ''
-          : ['cursor-not-allowed']
+          : ['cursor-not-allowed', 'opacity-50']
       "
       :disabled="currentPage <= 1"
       class="text-[2rem]"
@@ -26,7 +26,7 @@
       :class="
         currentPage < sizeList.length
           ? ''
-          : ['', 'cursor-not-allowed']
+          : ['cursor-not-allowed', 'opacity-50']
       "
       :disabled="currentPage >= sizeList.length"
       class="text-[2rem]"
