@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center justify-center transition-flex"
+    class="flex flex-col items-center justify-center transition-all overflow-hidden shadow-lg"
     :style="{
       '--isRoot': route.path === '/' ? '1' : '0',
       flex: 'var(--isRoot)',
@@ -66,7 +66,7 @@ const icons = ref([
   },
 ]);
 const { data: profile } = await useAsyncData('profile', async () => {
-  return [];
+  return {};
 });
 const goExternal = async (path: string) => {
   await navigateTo(path, {
