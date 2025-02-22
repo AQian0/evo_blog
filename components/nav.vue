@@ -8,7 +8,7 @@
   >
     <nuxt-img
       class="mb-16 aspect-square w-64 rounded-full"
-      :src="profile?.avatar"
+      src="/images/avatar.jpg"
       alt="avatar"
     />
     <ul class="flex flex-col mb-8 space-y-4">
@@ -65,9 +65,6 @@ const icons = ref([
     path: '',
   },
 ]);
-const { data: profile } = await useAsyncData('profile', async () => {
-  return {};
-});
 const goExternal = async (path: string) => {
   await navigateTo(path, {
     open: {
