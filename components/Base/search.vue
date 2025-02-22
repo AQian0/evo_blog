@@ -8,7 +8,7 @@
       class="w-72 px-2 py-1"
     />
     <button
-      class="absolute right-2 top-[50%] translate-y-[-50%] cursor-pointer opacity-50"
+      class="absolute right-2 top-[50%] translate-y-[-50%] cursor-pointer opacity-50 leading-0"
       @click="search"
     >
       <Icon name="i-ri-search-line" />
