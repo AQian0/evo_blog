@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/eslint',
     'nuxt-typed-router',
+    '@nuxt/fonts',
     '@nuxt/icon',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
@@ -71,6 +72,15 @@ export default defineNuxtConfig({
         imports: ['useOverlayScrollbars'],
       }
     ],
+  },
+
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+    },
+    defaults: {
+      weights: [400, 700],
+    },
   },
 
   compatibilityDate: '2025-02-05',
