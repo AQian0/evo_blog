@@ -21,10 +21,7 @@ const {
 const goBlog = async () => {
   if (!blog?.blogId) return;
   await navigateTo({
-    path: '/blog',
-    query: {
-      blogId: blog.blogId,
-    },
+    path: `/blogs/${blog.blogId}`,
   });
 };
 </script>

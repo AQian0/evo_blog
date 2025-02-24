@@ -46,7 +46,7 @@ const extendedList = ref([
   },
 ]);
 
-const { data: blog } = useFetch(`/api/blogs/${route.query.blogId}`)
+const { data: blog } = useFetch(`/api/blogs/${route.params.blogId}`)
 useHead({
   title: `Evo Blog | ${blog.value?.title}`,
 });
