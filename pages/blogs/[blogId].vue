@@ -1,7 +1,7 @@
 <template>
   <div ref="blogRef" class="flex flex-col items-center">
     <div class="fixed left-0 top-0 z-1 h-40 w-full bg-gradient-to-t" />
-    <div class="mt-24 indent-2 text-10 tracking-[0.5rem]">{{ blog?.title }}</div>
+    <div class="mt-24 indent-2 text-5xl tracking-[0.5rem]">{{ blog?.title }}</div>
     <div class="content relative my-6 w-192 text-xl">
       <template v-if="blog">
         <ContentRenderer :value="blog.body" />
