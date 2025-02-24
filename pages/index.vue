@@ -2,7 +2,7 @@
   <div class="flex flex-col relative items-center justify-around gap-4">
     <BaseTabs v-model="type" :tabs="tabs" class="absolute left-6 -top-12 blur-[0.3]" />
     <home-posts>
-      <home-posts-post v-for="post in posts" :post />
+      <home-posts-post v-for="blog in blogs" :blog />
     </home-posts>
     <base-pagination
       :total="totalCount"
@@ -49,18 +49,17 @@ const tabs = ref([
     value: 'book',
   },
 ]);
-const { data: posts } = await useFetch('/api/posts',  
+const { data: blogs } = await useFetch('/api/blogs',  
   {
     query: {
       page: page.value,
       perPage: perPage.value,
     },
     watch: [page, () => route.query],
-    transform: (posts) => posts.map(post => ({
-      postId: post.postId,
-      title: post.title,
-      content: post.content,
-      updatedAt: post.updatedAt,
+    transform: (blogs) => blogs.map(blog => ({
+      blogId: blog.blogId,
+      title: blog.title,
+      body: blog.body,
     })),
     onResponse: ({response}) => {
       totalCount.value = Number(response.headers.get('X-Total-Count')!)

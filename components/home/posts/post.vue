@@ -1,42 +1,29 @@
 <template>
   <li
     class="flex flex-col group h-20 w-160 cursor-pointer justify-between border-2 rounded px-3 py-2 transition"
-    @click="goPost"
+    @click="goBlog"
   >
     <div class="flex justify-between text-xl">
-      <base-text omitted>{{ post?.title }}</base-text>
-      <base-text omitted>{{
-        useDateText(post?.updatedAt)
-      }}</base-text>
+      <base-text omitted>{{ blog?.title }}</base-text>
     </div>
-    <base-text omitted>
-      {{ extractText }}
-    </base-text>
   </li>
 </template>
 <script lang="ts" setup>
 const {
-  post
+  blog
 } = defineProps<{
-  post: {
-    postId: number
+  blog: {
+    blogId: number
     title: string
-    updatedAt: string
-    content: string
+    body: string
   }
 }>();
-const extractText = computed(() => {
-  return (post?.content)
-    .replace(/<img\b[^>]*>/gi, '[图片]')
-    .replace(/<[^>]+>/g, '')
-    .substring(0, 100);
-});
-const goPost = async () => {
-  if (!post?.postId) return;
+const goBlog = async () => {
+  if (!blog?.blogId) return;
   await navigateTo({
-    path: '/post',
+    path: '/blog',
     query: {
-      postId: post.postId,
+      blogId: blog.blogId,
     },
   });
 };

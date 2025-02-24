@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
+    '@nuxt/content',
   ],
 
   css: [
