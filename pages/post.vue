@@ -21,8 +21,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import hljs from 'highlight.js';
-
 const route = useRoute();
 const blogRef = ref();
 const { height: blogHeight } = useElementSize(blogRef);
@@ -49,9 +47,6 @@ const extendedList = ref([
 ]);
 
 const { data: blog } = useFetch(`/api/blogs/${route.query.blogId}`)
-onMounted(() => {
-  hljs.highlightAll();
-});
 useHead({
   title: `Evo Blog | ${blog.value?.title}`,
 });
