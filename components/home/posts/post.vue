@@ -9,13 +9,15 @@
   </li>
 </template>
 <script lang="ts" setup>
+import type { MarkdownRoot } from '@nuxt/content';
+
 const {
   blog
 } = defineProps<{
   blog: {
-    blogId: number
+    blogId: string
     title: string
-    body: string
+    body: MarkdownRoot
   }
 }>();
 const goBlog = async () => {
