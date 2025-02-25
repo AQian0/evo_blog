@@ -36,7 +36,6 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/base.css',
-    'highlight.js/styles/github-dark.min.css',
     'overlayscrollbars/overlayscrollbars.css',
   ],
 
