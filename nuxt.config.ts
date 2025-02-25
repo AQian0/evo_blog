@@ -25,7 +25,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/html-validator',
     '@nuxt/image',
-    'dayjs-nuxt',
     '@nuxt/eslint',
     'nuxt-typed-router',
     '@nuxt/fonts',
@@ -71,6 +70,10 @@ export default defineNuxtConfig({
       {
         from: 'overlayscrollbars-vue',
         imports: ['useOverlayScrollbars'],
+      },
+      {
+        from: '@formkit/tempo',
+        imports: ['format', 'parse'],
       }
     ],
   },
