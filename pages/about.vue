@@ -18,13 +18,8 @@ const infoList = ref([
   },
   {
     label: 'UI',
-    name: 'Unocss',
-    path: 'https://unocss.dev/',
-  },
-  {
-    label: '数据库',
-    name: 'Supabase',
-    path: 'https://supabase.com/',
+    name: 'tailwindcss',
+    path: 'https://tailwindcss.com/',
   },
   {
     label: '字体',
