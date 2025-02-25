@@ -36,7 +36,6 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/base.css',
-    '~/assets/content.css',
     'highlight.js/styles/github-dark.min.css',
     'overlayscrollbars/overlayscrollbars.css',
   ],
@@ -85,6 +84,16 @@ export default defineNuxtConfig({
     defaults: {
       weights: [400, 700],
     },
+  },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-light-default',
+        }
+      }
+    }
   },
 
   compatibilityDate: '2025-02-05',

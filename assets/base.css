@@ -21,3 +21,13 @@ body {
 input:focus-visible {
   outline: none;
 }
+
+pre {
+  overflow-x: auto;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+code {
+  white-space: pre;
+}
