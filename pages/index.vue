@@ -1,8 +1,10 @@
 <template>
   <div class="flex flex-col relative items-center justify-around gap-4">
-    <home-posts>
-      <home-posts-post v-for="blog in blogs" :blog />
-    </home-posts>
+    <OverlayScrollbarsComponent defer class="h-[448px]">
+      <BlogList>
+        <BlogListItem v-for="blog in blogs" :blog />
+      </BlogList>
+    </OverlayScrollbarsComponent>
     <base-pagination
       :total="totalCount"
       :page-size="perPage"
@@ -45,6 +47,7 @@ const { data: blogs } = await useFetch('/api/blogs',
       blogId: blog.blogId,
       title: blog.title,
       body: blog.body,
+      date: blog.date,
     })),
     onResponse: ({response}) => {
       totalCount.value = Number(response.headers.get('X-Total-Count')!)

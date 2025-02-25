@@ -1,11 +1,10 @@
 <template>
   <li
-    class="flex flex-col group h-20 w-160 cursor-pointer justify-between border-2 rounded px-3 py-2 transition"
+    class="flex w-160 cursor-pointer justify-between items-center px-3 py-2 transition text-xl"
     @click="goBlog"
   >
-    <div class="flex justify-between text-xl">
-      <base-text omitted>{{ blog?.title }}</base-text>
-    </div>
+    <base-text omitted>{{ blog.title }}</base-text>
+    <span>{{ format(blog.date, 'short') }}</span>
   </li>
 </template>
 <script lang="ts" setup>
@@ -18,10 +17,10 @@ const {
     blogId: string
     title: string
     body: MarkdownRoot
+    date: string
   }
 }>();
 const goBlog = async () => {
-  if (!blog?.blogId) return;
   await navigateTo({
     path: `/blogs/${blog.blogId}`,
   });
