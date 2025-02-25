@@ -34,6 +34,7 @@
         "@vueuse/core": "^12.7.0",
         "@vueuse/nuxt": "^12.7.0",
         "cz-git": "^1.11.0",
+        "daisyui": "^5.0.0-beta.8",
         "drizzle-kit": "^0.30.4",
         "eslint": "^9.20.1",
         "nuxt": "^3.15.4",
@@ -860,6 +861,8 @@
     "csstype": ["csstype@3.1.3", "", {}, "sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw=="],
 
     "cz-git": ["cz-git@1.11.0", "", {}, "sha512-FCNkpyVmNPX0P8kHtX8uoFcXsJ4bjivMXVS5vc/qCyM8jj+Tuqo6CXQjGQKwKl0Lk9VNz7o6JfPoU/mM/XhxqA=="],
+
+    "daisyui": ["daisyui@5.0.0-beta.8", "", {}, "sha512-jSokqm5i+Pv1jG80wliNzMHjmcF+iMx5xRUpk0/QExVoVNyQNWeCsaWJQubPvUq7bt9nzSsQTR2uIZBoyIIoaA=="],
 
     "dargs": ["dargs@8.1.0", "", {}, "sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw=="],
 
