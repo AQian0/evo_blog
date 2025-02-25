@@ -8,8 +8,8 @@
   >
     <nuxt-img
       class="mb-16 aspect-square w-64 rounded-full"
-      height="256"
-      width="256"
+      height="320"
+      width="320"
       src="/images/avatar.jpg"
       alt="avatar"
     />
