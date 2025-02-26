@@ -53,6 +53,13 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    screens: {
+      icon: 320,
+      icon2x: 640,
+    }
+  },
+
   icon: {
     serverBundle: {
       collections: ['ri']
