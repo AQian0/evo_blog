@@ -4,7 +4,7 @@
     @click="goBlog"
   >
     <base-text omitted>{{ blog.title }}</base-text>
-    <span>{{ format(blog.date, 'short') }}</span>
+    <span>{{ format(blog.date, 'YYYY-MM-DD') }}</span>
   </li>
 </template>
 <script lang="ts" setup>
