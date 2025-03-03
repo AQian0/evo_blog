@@ -62,7 +62,7 @@ export default defineNuxtConfig({
 
   icon: {
     serverBundle: {
-      collections: ['ri']
+      collections: ['ri', 'catppuccin'],
     }
   },
 
