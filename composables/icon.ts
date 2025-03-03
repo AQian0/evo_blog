@@ -1,0 +1,22 @@
+enum LanguageMap {
+  json = 'Json',
+  js = 'JavaScript',
+  ts = 'TypeScript',
+  html = 'HTML',
+  css = 'CSS',
+  vue = 'Vue',
+  sh = 'Shell',
+  mdc = 'MDC',
+  md = 'Markdown',
+  yaml = 'YAML',
+}
+
+export const useLanguageIcon = (extName: string) => {
+  if (!(extName in LanguageMap)) {
+    return `i-ri-file-unknow-line`    
+  }
+  if (extName === 'mdc') {
+    extName = 'md'
+  }
+  return `i-catppuccin-${LanguageMap[extName as keyof typeof LanguageMap].toLowerCase()}`
+}
