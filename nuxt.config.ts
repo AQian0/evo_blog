@@ -25,7 +25,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/html-validator',
     '@nuxt/image',
-    '@nuxt/eslint',
     'nuxt-typed-router',
     '@nuxt/fonts',
     '@nuxt/icon',
