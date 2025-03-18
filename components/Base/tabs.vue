@@ -10,10 +10,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-type Tab = {
+interface Tab {
   label: number | string;
   value: number | string;
-};
+}
 const selectedValue = defineModel<number | string>();
 const props = defineProps<{
   tabs: Tab[];

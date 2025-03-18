@@ -1,4 +1,4 @@
-import type { H3Event, EventHandlerRequest } from 'h3'
+import type { EventHandlerRequest, H3Event } from 'h3'
 
 export const appendPagination = (event: H3Event<EventHandlerRequest>, totalCount: number) => {
   const { page = 1, perPage = 10 }: { page: number, perPage: number} = getQuery(event)

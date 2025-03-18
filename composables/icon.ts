@@ -15,7 +15,7 @@ export const useLanguageIcon = (extName: string) => {
   if (!(extName in LanguageMap)) {
     return `i-ri-file-unknow-line`    
   }
-  if (extName === 'mdc') {
+  if ('mdc' === extName) {
     extName = 'md'
   }
   return `i-catppuccin-${LanguageMap[extName as keyof typeof LanguageMap].toLowerCase()}`

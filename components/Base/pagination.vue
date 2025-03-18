@@ -46,13 +46,13 @@ const emit = defineEmits<{
   change: [page: number];
 }>();
 const sizeList = computed(() => {
-  if (!props.total) return [];
+  if (!props.total) {return [];}
   const totalPages = Math.ceil(props.total / props.pageSize);
-  let lowPage = props.currentPage - 2 > 0 ? props.currentPage - 2 : 1;
+  let lowPage = 0 < props.currentPage - 2 ? props.currentPage - 2 : 1;
   let highPage =
     props.currentPage + 2 < totalPages ? props.currentPage + 2 : totalPages;
-  if (highPage - lowPage < 4) {
-    if (lowPage === 1) {
+  if (4 > highPage - lowPage) {
+    if (1 === lowPage) {
       highPage = Math.min(totalPages, lowPage + 4);
     } else if (highPage === totalPages) {
       lowPage = Math.max(1, highPage - 4);
@@ -65,7 +65,7 @@ const sizeList = computed(() => {
   return pageArray;
 });
 const turnPage = (type: 'up' | 'down') => {
-  if (type === 'up') {
+  if ('up' === type) {
     changePage(props.currentPage - 1);
   } else {
     changePage(props.currentPage + 1);

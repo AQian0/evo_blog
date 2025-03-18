@@ -14,7 +14,7 @@
 const route = useRoute();
 const router = useRouter();
 const isRoot = computed(() => {
-  return route.path === '/';
+  return '/' === route.path;
 });
 const goBack = () => {
   router.back();

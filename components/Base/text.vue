@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<propsType>(), {
   omitted: false,
 });
 const omittedClass = computed(() => {
-  if (!props.omitted) return;
+  if (!props.omitted) {return;}
   return ['overflow-hidden', 'whitespace-nowrap', 'text-ellipsis'];
 });
 </script>

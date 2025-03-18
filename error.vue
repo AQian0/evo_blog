@@ -35,8 +35,8 @@ const props = defineProps<{
   error: NuxtError;
 }>();
 const getCodeColor = (code: number) => {
-  if (code >= 400) return 'text-red-500';
-  if (code >= 300) return 'text-yellow-500';
+  if (400 <= code) {return 'text-red-500';}
+  if (300 <= code) {return 'text-yellow-500';}
   return 'text-green-500';
 };
 const buttonGroup = [

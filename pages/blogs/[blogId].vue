@@ -28,7 +28,7 @@ const { height: blogHeight } = useElementSize(blogRef);
 const { height: windowHeight } = useWindowSize();
 const { y: scrollY } = useWindowScroll();
 const extendedListOpacity = computed(() => {
-  if (Math.abs(blogHeight.value - windowHeight.value) < 1) {
+  if (1 > Math.abs(blogHeight.value - windowHeight.value)) {
     return '1';
   }
   return Math.min(

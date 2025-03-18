@@ -1,4 +1,4 @@
-import { pgTable, serial, varchar, text, integer, timestamp } from 'drizzle-orm/pg-core';
+import { integer, pgTable, serial, text, timestamp, varchar } from 'drizzle-orm/pg-core';
 import { users } from './user';
 
 export const media = pgTable('media', {
