@@ -55,14 +55,6 @@ const icons = ref([
     path: 'https://github.com/AQian-Cup',
   },
   {
-    label: 'i-ri-qq-line',
-    path: '',
-  },
-  {
-    label: 'i-ri-wechat-line',
-    path: '',
-  },
-  {
     label: 'i-ri-netease-cloud-music-line',
     path: '',
   },
