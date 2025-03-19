@@ -4,7 +4,7 @@
     <div class="flex flex-col space-y-2">
       <div v-for="info in infoList" class="inline-flex">
         <div class="w-16">{{ info.label }}：</div>
-        <NuxtLink :to="info.path">{{ info.name }}</NuxtLink>
+        <NuxtLink class="font-bold" :to="info.path">{{ info.name }}</NuxtLink>
       </div>
     </div>
   </div>
