@@ -45,7 +45,7 @@ const nav = ref([
   {
     label: '支持',
     method: async () => {
-      await navigateTo('/surport');
+      await navigateTo('/support');
     },
   },
 ]);
