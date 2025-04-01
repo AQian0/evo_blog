@@ -17,7 +17,6 @@
     "@pinia/colada": "^0.13.8",
     "@pinia/colada-nuxt": "0.0.5",
     "@types/bun": "^1.2.8",
-    "@types/node": "^22.13.17",
     "@vueuse/core": "^12.8.2",
     "@vueuse/nuxt": "^12.8.2",
     "cz-git": "^1.11.1",
