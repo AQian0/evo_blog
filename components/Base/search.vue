@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-base w-192">
+  <div class="relative text-base w-192" @keyup.enter="search">
     <Input
       ref="input"
       v-model="searchContent"
