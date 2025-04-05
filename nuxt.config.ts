@@ -103,5 +103,9 @@ export default defineNuxtConfig({
     }
   },
 
+  shadcn: {
+    prefix: '',
+  },
+
   compatibilityDate: '2025-02-05',
 });
