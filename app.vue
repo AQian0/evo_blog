@@ -3,14 +3,10 @@
     <div class="min-h-screen w-full flex overflow-hidden">
         <Nav />
         <NuxtLoadingIndicator :height="1" />
-        <div class="flex flex-col flex-3 relative items-center py-16">
+        <div class="flex flex-col flex-3 relative items-center">
           <BasePageHeader />
           <NuxtPage class="w-full flex-1" />
           <Footer />
-        </div>
-        <div class="fixed right-6 top-4 z-10 flex items-center gap-4 text-2xl">
-          <BaseSearch />
-          <BaseThemeButton />
         </div>
     </div>
   </OverlayScrollbarsComponent>

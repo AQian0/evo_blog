@@ -1,11 +1,10 @@
 <template>
-  <div class="relative h-fit overflow-hidden border rounded-sm text-base">
-    <input
+  <div class="relative text-base w-192">
+    <Input
       ref="input"
       v-model="searchContent"
       type="text"
       :placeholder="placeholder"
-      class="w-72 px-2 py-1"
     />
     <button
       class="absolute right-2 top-[50%] translate-y-[-50%] cursor-pointer opacity-50 leading-0"

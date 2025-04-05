@@ -1,16 +1,19 @@
 <template>
-  <div class="flex flex-col relative items-center justify-around gap-4">
-    <OverlayScrollbarsComponent defer class="h-[448px]">
-      <BlogList>
-        <BlogListItem v-for="blog in blogs" :blog />
-      </BlogList>
-    </OverlayScrollbarsComponent>
-    <base-pagination
-      :total="totalCount"
-      :page-size="perPage"
-      :current-page="page"
-      @change="changePage"
-    />
+  <div class="flex flex-col h-full items-center p-2">
+    <BaseSearch />
+    <div class="flex flex-col flex-1 relative items-center justify-around gap-4">
+      <OverlayScrollbarsComponent defer class="h-[448px]">
+        <BlogList>
+          <BlogListItem v-for="blog in blogs" :blog />
+        </BlogList>
+      </OverlayScrollbarsComponent>
+      <base-pagination
+        :total="totalCount"
+        :page-size="perPage"
+        :current-page="page"
+        @change="changePage"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
