@@ -7,6 +7,7 @@ export default defineContentConfig({
       source: 'blogs/**',
       schema: z.object({
         blogId: z.string(),
+        title: z.string(),
         cover: z.string().optional(),
         date: z.date(),
         tags: z.array(z.string()),
