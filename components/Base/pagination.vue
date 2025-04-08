@@ -36,21 +36,21 @@
   </div>
 </template>
 <script lang="ts" setup>
-interface propsType {
-  total: number | null;
-  currentPage: number;
-  pageSize: number;
+interface Props {
+  total?: number;
+  currentPage?: number;
+  pageSize?: number;
 }
-const props = defineProps<propsType>();
+const { total = 0, currentPage = 1, pageSize = 10 } = defineProps<Props>();
 const emit = defineEmits<{
   change: [page: number];
 }>();
 const sizeList = computed(() => {
-  if (!props.total) {return [];}
-  const totalPages = Math.ceil(props.total / props.pageSize);
-  let lowPage = 0 < props.currentPage - 2 ? props.currentPage - 2 : 1;
+  if (!total) {return [];}
+  const totalPages = Math.ceil(total / pageSize);
+  let lowPage = 0 < currentPage - 2 ? currentPage - 2 : 1;
   let highPage =
-    props.currentPage + 2 < totalPages ? props.currentPage + 2 : totalPages;
+    currentPage + 2 < totalPages ? currentPage + 2 : totalPages;
   if (4 > highPage - lowPage) {
     if (1 === lowPage) {
       highPage = Math.min(totalPages, lowPage + 4);
@@ -66,9 +66,9 @@ const sizeList = computed(() => {
 });
 const turnPage = (type: 'up' | 'down') => {
   if ('up' === type) {
-    changePage(props.currentPage - 1);
+    changePage(currentPage - 1);
   } else {
-    changePage(props.currentPage + 1);
+    changePage(currentPage + 1);
   }
 };
 const changePage = (page: number) => {
