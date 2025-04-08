@@ -9,8 +9,8 @@
       </OverlayScrollbarsComponent>
       <base-pagination
         :total="totalCount"
-        :page-size="perPage"
-        :current-page="page"
+        :page-size="query?.perPage"
+        :current-page="query?.page"
         @change="changePage"
       />
     </div>
@@ -18,34 +18,24 @@
 </template>
 <script lang="ts" setup>
 const route = useRoute();
-const totalCount = ref(10);
-const page = ref(1);
-const perPage = ref(10);
-const changePage = (index: number) => {
-  page.value = index;
+const totalCount = ref(0);
+const changePage = async (index: number) => {
+  await navigateTo({
+    path: '/',
+    query: {
+      ...query.value,
+      page: index
+    },
+  });
 };
-const type = ref((route.query.type as string | undefined) || '');
-watch(() => type.value,
-  async () => {
-    if (type.value) {
-      await navigateTo({
-        path: '/',
-        query: {
-          type: type.value,
-        },
-      });
-    } else {
-      await navigateTo('/');
-    }
-  },
-);
+const query = computed<{
+  perPage?: number
+  page?: number
+  search?: string
+}>(() => route.query)
 const { data: blogs } = await useFetch('/api/blogs',  
   {
-    query: {
-      page: page.value,
-      perPage: perPage.value,
-    },
-    watch: [page, () => route.query],
+    query,
     transform: (blogs) => blogs.map(blog => ({
       blogId: blog.blogId,
       title: blog.title,
