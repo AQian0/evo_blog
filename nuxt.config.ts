@@ -58,7 +58,6 @@ export default defineNuxtConfig({
     screens: {
       icon: 40,
       icon2x: 80,
-      icon4x: 160,
     }
   },
 
