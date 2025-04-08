@@ -1,8 +1,7 @@
 <template>
   <div class="relative text-base w-192" @keyup.enter="search">
     <Input
-      ref="input"
-      v-model="searchContent"
+      v-model="content"
       type="text"
       :placeholder="placeholder"
     />
@@ -16,26 +15,15 @@
 </template>
 <script lang="ts" setup>
 const placeholder = ref('在此搜索');
-const input = ref();
-const { focused } = useFocus(input);
-const searchContent = ref('');
+const route = useRoute()
+const content = ref(route.query.search as string || '')
 const search = async () => {
-  if (!searchContent.value) {
-    return;
-  }
   await navigateTo({
     path: '/',
     query: {
-      search: searchContent.value,
+      search: content.value || undefined,
     },
   });
-  searchContent.value = '';
 };
-onKeyStroke('Enter', async () => {
-  if (!focused.value) {
-    return;
-  }
-  await search();
-});
 </script>
 <style scoped></style>
