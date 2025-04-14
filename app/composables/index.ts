@@ -1,1 +1,1 @@
-export * from '../../composables/icon.js'
+export * from './icon'
