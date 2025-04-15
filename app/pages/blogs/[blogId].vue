@@ -1,15 +1,12 @@
 <template>
-  <div ref="blogRef" class="flex flex-col items-center">
+  <div class="flex flex-col items-center">
     <div class="fixed left-0 top-0 z-1 h-40 w-full bg-gradient-to-t" />
     <div class="mt-24 indent-2 text-5xl tracking-[0.5rem]">{{ blog?.title }}</div>
     <template v-if="blog">
       <ContentRenderer class="relative my-6 w-192 text-xl" :value="blog.body" />
     </template>
     <!-- 未来补充骨架屏 -->
-    <div
-      class="flex flex-col fixed transition space-y-4 left-[86%] top-[70%]"
-      :style="`opacity: ${extendedListOpacity}`"
-    >
+    <div class="flex flex-col fixed transition space-y-4 left-[86%] top-[70%]">
       <button
         v-for="item in extendedList"
         cursor-pointer
@@ -23,19 +20,6 @@
 </template>
 <script lang="ts" setup>
 const route = useRoute();
-const blogRef = ref();
-const { height: blogHeight } = useElementSize(blogRef);
-const { height: windowHeight } = useWindowSize();
-const { y: scrollY } = useWindowScroll();
-const extendedListOpacity = computed(() => {
-  if (1 > Math.abs(blogHeight.value - windowHeight.value)) {
-    return '1';
-  }
-  return Math.min(
-    Math.sqrt(scrollY.value / (blogHeight.value - windowHeight.value)),
-    1,
-  ).toFixed(2);
-});
 const extendedList = ref([
   {
     label: 'i-ri-share-circle-line',
@@ -46,7 +30,6 @@ const extendedList = ref([
     method: () => {},
   },
 ]);
-
 const { data: blog } = useFetch(`/api/blogs/${route.params.blogId}`)
 useHead({
   title: `Evo Blog | ${blog.value?.title}`,
