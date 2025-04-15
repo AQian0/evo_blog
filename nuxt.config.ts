@@ -109,8 +109,8 @@ export default defineNuxtConfig({
   },
 
   shadcn: {
-    prefix: 'sh',
-    componentDir: './app/components/sh'
+    prefix: '',
+    componentDir: './app/components/ui'
   },
 
   compatibilityDate: '2025-02-05',
