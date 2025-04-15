@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
   app: {
     head: {
       title: 'Evo Blog',
@@ -108,7 +109,8 @@ export default defineNuxtConfig({
   },
 
   shadcn: {
-    prefix: '',
+    prefix: 'sh',
+    componentDir: './app/components/sh'
   },
 
   compatibilityDate: '2025-02-05',

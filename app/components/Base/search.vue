@@ -1,6 +1,6 @@
 <template>
   <div class="relative text-base w-192" @keyup.enter="search">
-    <Input
+    <ShInput
       v-model="content"
       type="text"
       :placeholder="placeholder"

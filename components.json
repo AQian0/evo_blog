@@ -13,7 +13,7 @@
     "components": "@/components",
     "composables": "@/composables",
     "utils": "@/utils/shadcn",
-    "ui": "@/components",
+    "ui": "@/components/sh",
     "lib": "@/lib"
   },
   "iconLibrary": "lucide"
