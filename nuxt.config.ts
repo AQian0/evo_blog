@@ -37,6 +37,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     'shadcn-nuxt',
+    'motion-v/nuxt'
   ],
 
   css: [

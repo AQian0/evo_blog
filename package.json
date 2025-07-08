@@ -39,6 +39,7 @@
     "dotenv": "^16.6.1",
     "drizzle-orm": "^0.39.3",
     "lucide-vue-next": "^0.487.0",
+    "motion-v": "^1.5.0",
     "overlayscrollbars": "^2.11.4",
     "overlayscrollbars-vue": "^0.5.9",
     "pinia": "^3.0.3",
