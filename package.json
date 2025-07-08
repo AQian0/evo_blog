@@ -19,7 +19,6 @@
     "@types/bun": "^1.2.18",
     "@vueuse/core": "^13.5.0",
     "@vueuse/nuxt": "^12.8.2",
-    "drizzle-kit": "^0.30.6",
     "nuxt": "^3.17.6",
     "nuxt-typed-router": "^3.8.0",
     "oxlint": "^0.16.12",
