@@ -30,7 +30,7 @@ const extendedList = ref([
     method: () => {},
   },
 ]);
-const { data: blog } = useFetch(`/api/blogs/${route.params.blogId}`)
+const { data: blog } = await useFetch(`/api/blogs/${route.params.blogId}`)
 useHead({
   title: `Evo Blog | ${blog.value?.title}`,
 });
