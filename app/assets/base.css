@@ -4,7 +4,7 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-display: "HarmonyOS_Sans_SC_Regular", "HarmonyOS_Sans_TC_Regular";
+  --font-display: "MapleMonoNormalNL-NF-CN-Regular";
 }
 
 @layer base {
