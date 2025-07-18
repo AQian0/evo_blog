@@ -11,14 +11,11 @@
   * {
     scrollbar-width: none;
     -ms-overflow-style: none;
+    font-family: var(--font-display);
   }
 
   * ::-webkit-scrollbar {
     display: none;
-  }
-
-  body {
-    font-family: var(--font-display);
   }
 
   input:focus-visible {
