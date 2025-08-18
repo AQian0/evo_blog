@@ -8,6 +8,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'zh-CN',
       },
+      meta: [
+        {
+          name: 'description',
+          content: 'A blog that documents programming-related content such as JavaScript, Vue, and Rust, which, like you and me, will get better.',
+        }
+      ],
     },
   },
 
