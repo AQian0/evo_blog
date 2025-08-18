@@ -6,10 +6,8 @@
       flex: 'var(--isRoot)',
     }"
   >
-    <nuxt-img
-      class="mb-16 aspect-square w-64 rounded-full"
-      height="160"
-      width="160"
+    <nuxt-picture
+      class="mb-16 overflow-hidden w-64 rounded-full"
       src="/images/avatar.jpg"
       alt="avatar"
     />
