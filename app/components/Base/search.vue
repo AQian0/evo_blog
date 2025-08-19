@@ -21,7 +21,7 @@ const search = async () => {
   await navigateTo({
     path: '/',
     query: {
-      search: content.value || undefined,
+      search: content.value,
     },
   });
 };

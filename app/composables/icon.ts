@@ -11,7 +11,7 @@ enum LanguageMap {
   yaml = 'YAML',
 }
 
-export const useLanguageIcon = (extName: string) => {
+export const useLanguageIcon = (extName: string): string => {
   if (!(extName in LanguageMap)) {
     return `i-ri-file-unknow-line`    
   }
