@@ -13,6 +13,9 @@
       width="256"
       alt="avatar"
       preload
+      :imgAttrs="{
+        fetchpriority: 'high'
+      }"
     />
     <ul class="flex flex-col mb-8 space-y-4">
       <li
