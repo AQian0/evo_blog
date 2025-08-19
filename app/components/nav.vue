@@ -7,8 +7,10 @@
     }"
   >
     <nuxt-picture
-      class="mb-16 overflow-hidden w-64 rounded-full"
+      class="mb-16 aspect-square overflow-hidden w-64 rounded-full"
       src="/images/avatar.jpg"
+      height="256"
+      width="256"
       alt="avatar"
       preload
     />
