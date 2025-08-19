@@ -10,6 +10,7 @@
       class="mb-16 overflow-hidden w-64 rounded-full"
       src="/images/avatar.jpg"
       alt="avatar"
+      preload
     />
     <ul class="flex flex-col mb-8 space-y-4">
       <li
