@@ -1,10 +1,9 @@
 <template>
-  <div
+  <Motion
+    layout
+    as="div"
     class="flex flex-col items-center justify-center transition-all overflow-hidden shadow-lg"
-    :style="{
-      '--isRoot': route.path === '/' ? '1' : '0',
-      flex: 'var(--isRoot)',
-    }"
+    :transition="{ type: 'tween' }"
   >
     <nuxt-picture
       class="mb-16 aspect-square overflow-hidden w-64 rounded-full"
@@ -35,10 +34,9 @@
         <Icon size="1.5rem" :name="icon.label" />
       </li>
     </ul>
-  </div>
+  </Motion>
 </template>
 <script lang="ts" setup>
-const route = useRoute();
 const nav = ref([
   {
     label: '关于',

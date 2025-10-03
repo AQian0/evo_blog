@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen w-full flex overflow-hidden">
-    <Nav />
+    <Nav :class="route.path !== '/' ? 'flex-0' : 'flex-1'" />
     <div class="flex flex-col flex-4 relative items-center">
       <BaseBack v-if="route.path !== '/'" />
       <slot />
