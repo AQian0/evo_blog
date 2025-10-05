@@ -32,7 +32,7 @@ const extendedList = ref([
 ]);
 const { data: blog } = await useFetch(`/api/blogs/${route.params.blogId}`)
 useHead({
-  title: `Evo Blog | ${blog.value?.title}`,
+  title: `Evo Blog | ${blog.value?.title || '加载失败'}`,
 });
 </script>
 <style scoped></style>
