@@ -1,7 +1,7 @@
 @import "tailwindcss" theme(static);
-
 @custom-variant dark (&:is(.dark *));
 @import "@nuxt/ui";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-display: "MapleMonoNormalNL-NF-CN-Regular";
