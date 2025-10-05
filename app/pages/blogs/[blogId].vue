@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col items-center">
     <div class="fixed left-0 top-0 z-1 h-40 w-full bg-gradient-to-t" />
-    <div class="mt-24 indent-2 text-5xl tracking-[0.5rem]">{{ blog?.title }}</div>
+    <div class="mt-24 indent-2 text-4xl tracking-[0.5rem]">{{ blog?.title }}</div>
     <template v-if="blog">
-      <ContentRenderer class="relative my-6 w-192 prose prose-xl" :value="blog.body" />
+      <ContentRenderer class="relative my-6 w-192 prose prose-zinc" :value="blog.body" />
     </template>
     <!-- 未来补充骨架屏 -->
     <div class="flex flex-col fixed transition space-y-4 left-[86%] top-[70%]">
