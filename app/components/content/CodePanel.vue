@@ -16,9 +16,7 @@
       </Motion>
     </button>
     <template #content>
-      <div class="p-2 bg-zinc-200 rounded-sm">
-        <slot />
-      </div>
+      <slot />
     </template>
   </UCollapsible>
 </template>
