@@ -56,5 +56,9 @@
   },
   "lint-staged": {
     "*": "oxlint"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@tailwindcss/oxide"
+  ]
 }
