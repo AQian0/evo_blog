@@ -4,20 +4,18 @@
     @click="goBlog"
   >
     <base-text omitted>{{ blog.title }}</base-text>
-    <span>{{ format(blog.date, 'YYYY-MM-DD') }}</span>
+    <span>{{ format(blog.createdDate, 'YYYY-MM-DD') }}</span>
   </li>
 </template>
 <script lang="ts" setup>
-import type { MarkdownRoot } from '@nuxt/content';
-
 const {
   blog
 } = defineProps<{
   blog: {
     blogId: string
     title: string
-    body: MarkdownRoot
-    date: string
+    createdDate: string
+    updatedDate: string
   }
 }>();
 const goBlog = async () => {

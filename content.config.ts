@@ -1,16 +1,18 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineCollection, defineContentConfig } from '@nuxt/content'
+import * as v from 'valibot'
 
 export default defineContentConfig({
   collections: {
     blogs: defineCollection({
       type: 'page',
       source: 'blogs/**',
-      schema: z.object({
-        blogId: z.string(),
-        title: z.string(),
-        cover: z.string().optional(),
-        date: z.date(),
-        tags: z.array(z.string()),
+      schema: v.object({
+        blogId: v.string(),
+        title: v.string(),
+        cover: v.optional(v.string()),
+        createdDate: v.date(),
+        updatedDate: v.date(),
+        tags: v.array(v.string()),
       })
     })
   }

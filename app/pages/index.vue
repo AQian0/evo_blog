@@ -37,10 +37,10 @@ const { data: blogs } = await useFetch('/api/blogs',
   {
     query,
     transform: (blogs) => blogs.map(blog => ({
-      blogId: blog.blogId,
+      blogId: String(blog.blogId),
       title: blog.title,
-      body: blog.body,
-      date: blog.date,
+      createdDate: blog.createdDate,
+      updatedDate: blog.updatedDate
     })),
     onResponse: ({response}) => {
       totalCount.value = Number(response.headers.get('X-Total-Count')!)
