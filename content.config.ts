@@ -4,7 +4,7 @@ import * as v from 'valibot'
 export default defineContentConfig({
   collections: {
     blogs: defineCollection({
-      type: 'page',
+      type: 'data',
       source: 'blogs/**',
       schema: v.object({
         blogId: v.string(),
