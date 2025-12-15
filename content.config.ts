@@ -1,18 +1,21 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content'
-import * as v from 'valibot'
+import { object, string, array, date, optional, record, any } from 'valibot'
 
 export default defineContentConfig({
   collections: {
     blogs: defineCollection({
       type: 'data',
       source: 'blogs/**',
-      schema: v.object({
-        blogId: v.string(),
-        title: v.string(),
-        cover: v.optional(v.string()),
-        createdDate: v.date(),
-        updatedDate: v.date(),
-        tags: v.array(v.string()),
+      schema: object({
+        blogId: string(),
+        title: string(),
+        description: optional(string()),
+        path: string(),
+        body: record(string(), any()),
+        cover: optional(string()),
+        createdDate: date(),
+        updatedDate: date(),
+        tags: array(string()),
       })
     })
   }
