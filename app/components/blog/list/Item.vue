@@ -8,15 +8,13 @@
   </li>
 </template>
 <script lang="ts" setup>
+import type { SerializeObject } from 'nitropack/types';
+import type { BlogsCollectionItem } from '@nuxt/content';
+
 const {
   blog
 } = defineProps<{
-  blog: {
-    blogId: string
-    title: string
-    createdDate: string
-    updatedDate: string
-  }
+  blog: SerializeObject<BlogsCollectionItem>
 }>();
 const goBlog = async () => {
   await navigateTo({
