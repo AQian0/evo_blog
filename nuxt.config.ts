@@ -83,7 +83,7 @@ export default defineNuxtConfig({
         imports: ['useOverlayScrollbars'],
       },
       {
-        from: '@formkit/tempo',
+        from: '@aqian0/shi-jian',
         imports: ['format', 'parse'],
       }
     ],
