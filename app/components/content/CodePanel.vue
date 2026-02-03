@@ -4,7 +4,7 @@
     class="flex flex-col my-2 gap-2"
   >
     <button
-      class="flex p-1 items-center hover:bg-zinc-200 rounded-sm"
+      class="flex p-1 items-center hover:bg-accent rounded-sm"
       :class="open ? 'justify-between' : 'justify-center'"
     >
       <Motion as="div" class="flex justify-center items-center gap-1 flex-none" layout :transition="{ type: 'tween' }">

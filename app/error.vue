@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen w-full gap-2 p-12 bg-stone-100">
+  <div class="flex flex-col h-screen w-full gap-2 p-12 bg-background">
     <div class="text-[3rem] font-bold">似乎遇到了一些问题……</div>
     <div class="flex items-center text-[2rem]">
       <span>错误代码：</span>
@@ -16,7 +16,7 @@
         </button>
       </div>
     </div>
-    <OverlayScrollbarsComponent defer class="flex-1 rounded bg-zinc-200">
+    <OverlayScrollbarsComponent defer class="flex-1 rounded bg-muted">
       <div class="flex flex-col gap-2 p-4">
         <span>信息：{{ props.error.message }}</span>
         <span v-if="props.error?.statusMessage"
