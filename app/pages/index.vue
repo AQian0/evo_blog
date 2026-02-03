@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 const totalCount = ref(0);
-const changePage = async (index: number) => {
+const changePage = async (index: number): Promise<void> => {
   await navigateTo({
     path: "/",
     query: {
@@ -37,7 +37,7 @@ const { data: blogs } = await useFetch("/api/blogs", {
   query,
   default: () => [],
   onResponse: ({ response }) => {
-    totalCount.value = Number(response.headers.get("X-Total-Count")!);
+    totalCount.value = Number(response.headers.get("X-Total-Count") ?? 0);
   },
 });
 </script>

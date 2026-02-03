@@ -14,7 +14,7 @@ import type { BlogsCollectionItem } from "@nuxt/content";
 const { blog } = defineProps<{
   blog: SerializeObject<BlogsCollectionItem>;
 }>();
-const goBlog = async () => {
+const goBlog = async (): Promise<void> => {
   await navigateTo({
     path: `/blogs/${blog.blogId}`,
   });

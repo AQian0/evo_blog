@@ -13,7 +13,7 @@
 const placeholder = ref("在此搜索");
 const route = useRoute();
 const content = ref((route.query.search as string) || "");
-const search = async () => {
+const search = async (): Promise<void> => {
   await navigateTo({
     path: "/",
     query: {

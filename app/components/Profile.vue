@@ -40,13 +40,13 @@
 const nav = ref([
   {
     label: "关于",
-    method: async () => {
+    method: async (): Promise<void> => {
       await navigateTo("/about");
     },
   },
   {
     label: "支持",
-    method: async () => {
+    method: async (): Promise<void> => {
       await navigateTo("/support");
     },
   },
@@ -61,7 +61,7 @@ const icons = ref([
     path: "",
   },
 ]);
-const goExternal = async (path: string) => {
+const goExternal = async (path: string): Promise<void> => {
   await navigateTo(path, {
     open: {
       target: "_blank",

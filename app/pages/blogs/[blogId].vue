@@ -19,11 +19,15 @@ const route = useRoute();
 const extendedList = ref([
   {
     label: "i-ri-share-circle-line",
-    method: () => {},
+    method: (): void => {
+      // TODO: implement share
+    },
   },
   {
     label: "i-ri-file-download-line",
-    method: () => {},
+    method: (): void => {
+      // TODO: implement download
+    },
   },
 ]);
 const { data: blog } = await useFetch(`/api/blogs/${route.params.blogId}`);

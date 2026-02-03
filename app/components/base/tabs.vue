@@ -18,7 +18,7 @@ const selectedValue = defineModel<number | string>();
 const props = defineProps<{
   tabs: Tab[];
 }>();
-const select = (value: number | string) => {
+const select = (value: number | string): void => {
   selectedValue.value = value;
 };
 </script>

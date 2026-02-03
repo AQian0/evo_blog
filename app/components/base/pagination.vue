@@ -53,14 +53,14 @@ const sizeList = computed(() => {
   );
   return pageArray;
 });
-const turnPage = (type: "up" | "down") => {
+const turnPage = (type: "up" | "down"): void => {
   if ("up" === type) {
     changePage(currentPage - 1);
   } else {
     changePage(currentPage + 1);
   }
 };
-const changePage = (page: number) => {
+const changePage = (page: number): void => {
   emit("change", page);
 };
 </script>

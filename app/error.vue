@@ -30,7 +30,7 @@ import type { NuxtError } from "#app";
 const props = defineProps<{
   error: NuxtError;
 }>();
-const getCodeColor = (code: number) => {
+const getCodeColor = (code: number): string => {
   if (400 <= code) {
     return "text-red-500";
   }
@@ -42,7 +42,7 @@ const getCodeColor = (code: number) => {
 const buttonGroup = [
   {
     icon: "i-ri-home-2-line",
-    method: async () => {
+    method: async (): Promise<void> => {
       await clearError({
         redirect: "/",
       });
@@ -50,7 +50,7 @@ const buttonGroup = [
   },
   {
     icon: "i-ri-github-line",
-    method: async () => {
+    method: async (): Promise<void> => {
       await navigateTo("https://github.com/AQian-Cup/evo_blog/issues", {
         external: true,
         open: {
