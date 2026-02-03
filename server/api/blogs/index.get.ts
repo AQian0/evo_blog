@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
     })
     blogTitles.push(...fuse.search(search).map(item => item.item.title))
   }
-  if (blogTitles.length) {
+  if (blogTitles.length > 0) {
     builder = builder.where('title', 'IN', blogTitles)
   }
   return await builder.skip((page - 1) * perPage).limit(perPage).all()
