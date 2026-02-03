@@ -8,6 +8,19 @@
         "import/unambiguous": "off",
         "import/no-default-export": "off"
       }
+    },
+    {
+      "files": [
+        "nuxt.config.ts",
+        "content.config.ts",
+        "modules/**/*.ts",
+        "server/api/**/*.ts",
+        "server/middleware/**/*.ts",
+        "server/plugins/**/*.ts"
+      ],
+      "rules": {
+        "import/no-default-export": "off"
+      }
     }
   ],
   "categories": {
