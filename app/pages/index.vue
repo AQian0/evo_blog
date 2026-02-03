@@ -21,26 +21,24 @@ const route = useRoute();
 const totalCount = ref(0);
 const changePage = async (index: number) => {
   await navigateTo({
-    path: '/',
+    path: "/",
     query: {
       ...query.value,
-      page: index
+      page: index,
     },
   });
 };
 const query = computed<{
-  perPage?: number
-  page?: number
-  search?: string
-}>(() => route.query)
-const { data: blogs } = await useFetch('/api/blogs',  
-  {
-    query,
-    default: () => [],
-    onResponse: ({response}) => {
-      totalCount.value = Number(response.headers.get('X-Total-Count')!)
-    }
+  perPage?: number;
+  page?: number;
+  search?: string;
+}>(() => route.query);
+const { data: blogs } = await useFetch("/api/blogs", {
+  query,
+  default: () => [],
+  onResponse: ({ response }) => {
+    totalCount.value = Number(response.headers.get("X-Total-Count")!);
   },
-);
+});
 </script>
 <style scoped></style>

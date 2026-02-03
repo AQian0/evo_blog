@@ -1,48 +1,44 @@
-import tailwindcss from "@tailwindcss/vite"
-import { defineNuxtConfig } from "nuxt/config"
- 
+import tailwindcss from "@tailwindcss/vite";
+import { defineNuxtConfig } from "nuxt/config";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Evo Blog',
+      title: "Evo Blog",
       htmlAttrs: {
-        lang: 'zh-CN',
+        lang: "zh-CN",
       },
       meta: [
         {
-          name: 'description',
-          content: 'A blog that documents programming-related content such as JavaScript, Vue, and Rust, which, like you and me, will get better.',
-        }
+          name: "description",
+          content:
+            "A blog that documents programming-related content such as JavaScript, Vue, and Rust, which, like you and me, will get better.",
+        },
       ],
     },
   },
 
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
 
   modules: [
-    '@vueuse/nuxt',
-    '@nuxtjs/html-validator',
-    '@nuxt/image',
-    'nuxt-typed-router',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@pinia/nuxt',
-    '@pinia/colada-nuxt',
-    '@nuxt/content',
-    '@nuxt/ui',
-    'shadcn-nuxt',
-    'motion-v/nuxt'
+    "@vueuse/nuxt",
+    "@nuxtjs/html-validator",
+    "@nuxt/image",
+    "nuxt-typed-router",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@pinia/nuxt",
+    "@pinia/colada-nuxt",
+    "@nuxt/content",
+    "@nuxt/ui",
+    "shadcn-nuxt",
+    "motion-v/nuxt",
   ],
 
-  css: [
-    '~/assets/base.css',
-    'overlayscrollbars/overlayscrollbars.css',
-  ],
+  css: ["~/assets/base.css", "overlayscrollbars/overlayscrollbars.css"],
 
   devtools: { enabled: true },
 
@@ -53,7 +49,7 @@ export default defineNuxtConfig({
   htmlValidator: {
     options: {
       rules: {
-        'text-content': 'off',
+        "text-content": "off",
       },
     },
   },
@@ -63,29 +59,34 @@ export default defineNuxtConfig({
       icon: 40,
       icon2x: 80,
       icon4x: 160,
-    }
+    },
   },
 
   icon: {
     serverBundle: {
-      collections: ['ri', 'catppuccin'],
-    }
+      collections: ["ri", "catppuccin"],
+    },
   },
 
   imports: {
     presets: [
       {
-        from: 'overlayscrollbars',
-        imports: ['OverlayScrollbars', 'ScrollbarsHidingPlugin', 'SizeObserverPlugin', 'ClickScrollPlugin'],
+        from: "overlayscrollbars",
+        imports: [
+          "OverlayScrollbars",
+          "ScrollbarsHidingPlugin",
+          "SizeObserverPlugin",
+          "ClickScrollPlugin",
+        ],
       },
       {
-        from: 'overlayscrollbars-vue',
-        imports: ['useOverlayScrollbars'],
+        from: "overlayscrollbars-vue",
+        imports: ["useOverlayScrollbars"],
       },
       {
-        from: '@aqian0/shi-jian',
-        imports: ['format', 'parse'],
-      }
+        from: "@aqian0/shi-jian",
+        imports: ["format", "parse"],
+      },
     ],
   },
 
@@ -93,16 +94,16 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          theme: 'github-dark-default',
-        }
-      }
-    }
+          theme: "github-dark-default",
+        },
+      },
+    },
   },
 
   shadcn: {
-    prefix: '',
-    componentDir: './app/components/ui'
+    prefix: "",
+    componentDir: "./app/components/ui",
   },
 
-  compatibilityDate: '2025-02-05',
+  compatibilityDate: "2025-02-05",
 });

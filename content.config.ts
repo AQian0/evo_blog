@@ -1,11 +1,11 @@
-import { defineCollection, defineContentConfig } from '@nuxt/content'
-import { object, string, array, date, optional, record, any } from 'valibot'
+import { defineCollection, defineContentConfig } from "@nuxt/content";
+import { object, string, array, date, optional, record, any } from "valibot";
 
 export default defineContentConfig({
   collections: {
     blogs: defineCollection({
-      type: 'data',
-      source: 'blogs/**',
+      type: "data",
+      source: "blogs/**",
       schema: object({
         blogId: string(),
         title: string(),
@@ -16,7 +16,7 @@ export default defineContentConfig({
         createdDate: date(),
         updatedDate: date(),
         tags: array(string()),
-      })
-    })
-  }
-})
+      }),
+    }),
+  },
+});

@@ -15,7 +15,7 @@ type Props = {
   onBack?: () => void;
 };
 
-const { text = '返回', onBack } = defineProps<Props>();
+const { text = "返回", onBack } = defineProps<Props>();
 
 const router = useRouter();
 

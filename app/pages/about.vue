@@ -12,24 +12,24 @@
 <script lang="ts" setup>
 const infoList = ref([
   {
-    label: '框架',
-    name: 'Nuxt',
-    path: 'https://nuxt.com/',
+    label: "框架",
+    name: "Nuxt",
+    path: "https://nuxt.com/",
   },
   {
-    label: 'UI',
-    name: 'tailwindcss',
-    path: 'https://tailwindcss.com/',
+    label: "UI",
+    name: "tailwindcss",
+    path: "https://tailwindcss.com/",
   },
   {
-    label: '字体',
-    name: 'HarmonyOS Sans',
-    path: 'https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583',
+    label: "字体",
+    name: "HarmonyOS Sans",
+    path: "https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583",
   },
   {
-    label: 'Github',
-    name: 'evo_blog',
-    path: 'https://github.com/AQian-Cup/evo_blog',
+    label: "Github",
+    name: "evo_blog",
+    path: "https://github.com/AQian-Cup/evo_blog",
   },
 ]);
 </script>

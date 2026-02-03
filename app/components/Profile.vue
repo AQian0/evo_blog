@@ -13,7 +13,7 @@
       alt="avatar"
       preload
       :imgAttrs="{
-        fetchpriority: 'high'
+        fetchpriority: 'high',
       }"
     />
     <ul class="flex flex-col mb-8 space-y-4">
@@ -39,32 +39,32 @@
 <script lang="ts" setup>
 const nav = ref([
   {
-    label: '关于',
+    label: "关于",
     method: async () => {
-      await navigateTo('/about');
+      await navigateTo("/about");
     },
   },
   {
-    label: '支持',
+    label: "支持",
     method: async () => {
-      await navigateTo('/support');
+      await navigateTo("/support");
     },
   },
 ]);
 const icons = ref([
   {
-    label: 'i-ri-github-line',
-    path: 'https://github.com/AQian-Cup',
+    label: "i-ri-github-line",
+    path: "https://github.com/AQian-Cup",
   },
   {
-    label: 'i-ri-netease-cloud-music-line',
-    path: '',
+    label: "i-ri-netease-cloud-music-line",
+    path: "",
   },
 ]);
 const goExternal = async (path: string) => {
   await navigateTo(path, {
     open: {
-      target: '_blank',
+      target: "_blank",
     },
   });
 };
