@@ -6,7 +6,6 @@
       "name": "nuxt-app",
       "dependencies": {
         "@aqian0/shi-jian": "^0.0.0",
-        "@formkit/tempo": "^0.1.2",
         "@iconify-json/ri": "^1.2.6",
         "@nuxt/content": "^3.9.0",
         "@nuxt/fonts": "^0.12.1",
@@ -205,8 +204,6 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
     "@floating-ui/vue": ["@floating-ui/vue@1.1.10", "", { "dependencies": { "@floating-ui/dom": "^1.7.5", "@floating-ui/utils": "^0.2.10", "vue-demi": ">=0.13.0" } }, "sha512-vdf8f6rHnFPPLRsmL4p12wYl+Ux4mOJOkjzKEMYVnwdf7UFdvBtHlLvQyx8iKG5vhPRbDRgZxdtpmyigDPjzYg=="],
-
-    "@formkit/tempo": ["@formkit/tempo@0.1.2", "", {}, "sha512-jNPPbjL8oj7hK3eHX++CwbR6X4GKQt+x00/q4yeXkwynXHGKL27dylYhpEgwrmediPP4y7s0XtN1if/M/JYujg=="],
 
     "@html-validate/stylish": ["@html-validate/stylish@4.3.0", "", { "dependencies": { "kleur": "^4.0.0" } }, "sha512-eUfvKpRJg5TvzSfTf2EovrQoTKjkRnPUOUnXVJ2cQ4GbC/bQw98oxN+DdSf+HxOBK00YOhsP52xWdJPV1o4n5w=="],
 
