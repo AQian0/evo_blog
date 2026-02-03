@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "evo_blog",
   "private": true,
   "scripts": {
     "build": "nuxt build",
