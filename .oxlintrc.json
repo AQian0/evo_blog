@@ -1,6 +1,15 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["typescript", "unicorn", "oxc", "import", "promise"],
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "rules": {
+        "import/unambiguous": "off",
+        "import/no-default-export": "off"
+      }
+    }
+  ],
   "categories": {
     "correctness": "error",
     "suspicious": "error",
