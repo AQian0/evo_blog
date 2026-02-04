@@ -2,7 +2,7 @@
   <Motion
     layout
     as="div"
-    class="flex flex-col items-center justify-center transition-all overflow-hidden shadow-lg bg-background"
+    class="flex flex-col items-center justify-center transition-all overflow-hidden shadow-lg bg-muted"
     :transition="{ type: 'tween' }"
   >
     <nuxt-picture

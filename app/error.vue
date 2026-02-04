@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen w-full gap-2 p-12 bg-background">
+  <div class="flex flex-col h-screen w-full gap-2 p-12">
     <div class="text-[3rem] font-bold">似乎遇到了一些问题……</div>
     <div class="flex items-center text-[2rem]">
       <span>错误代码：</span>

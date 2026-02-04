@@ -1,5 +1,5 @@
 <template>
-  <OverlayScrollbarsComponent defer class="h-screen bg-stone-100">
+  <OverlayScrollbarsComponent defer class="h-screen">
     <NuxtLoadingIndicator :height="1" />
     <NuxtLayout>
       <NuxtPage class="w-full flex-1" />

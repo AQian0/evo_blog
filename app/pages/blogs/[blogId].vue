@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center">
-    <div class="fixed left-0 top-0 z-1 h-40 w-full bg-gradient-to-t" />
+    <div class="fixed left-0 top-0 z-1 h-40 w-full bg-linear-to-t" />
     <div class="mt-24 indent-2 text-4xl tracking-[0.5rem]">{{ blog?.title }}</div>
     <ContentRenderer
       v-if="blog"

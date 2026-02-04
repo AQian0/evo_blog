@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-base w-192" @keyup.enter="search">
+  <div class="relative text-base w-3xl" @keyup.enter="search">
     <Input v-model="content" type="text" :placeholder="placeholder" />
     <button
       class="absolute right-2 top-[50%] translate-y-[-50%] cursor-pointer opacity-50 leading-0"
