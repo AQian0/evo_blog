@@ -4,5 +4,6 @@
   "experimentalSortImports": {
     "order": "asc",
     "sortSideEffects": true
-  }
+  },
+  "experimentalTailwindcss": {}
 }
