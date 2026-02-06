@@ -1,7 +1,7 @@
 <template>
   <div class="flex gap-6 font-bold">
     <span
-      v-for="tab in props.tabs"
+      v-for="tab in tabs"
       class="cursor-pointer text-2xl transition hover:opacity-80"
       :class="selectedValue === tab.value ? 'opacity-80' : 'opacity-40'"
       @click="select(tab.value)"
@@ -15,8 +15,8 @@ interface Tab {
   value: number | string;
 }
 const selectedValue = defineModel<number | string>();
-const props = defineProps<{
-  tabs: Tab[];
+const { tabs } = defineProps<{
+  tabs: ReadonlyArray<Tab>;
 }>();
 const select = (value: number | string): void => {
   selectedValue.value = value;

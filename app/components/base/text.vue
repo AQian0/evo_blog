@@ -4,14 +4,12 @@
   </div>
 </template>
 <script lang="ts" setup>
-interface propsType {
+type Props = {
   omitted?: boolean;
-}
-const props = withDefaults(defineProps<propsType>(), {
-  omitted: false,
-});
+};
+const { omitted = false } = defineProps<Props>();
 const omittedClass = computed(() => {
-  if (!props.omitted) {
+  if (!omitted) {
     return;
   }
   return ["overflow-hidden", "whitespace-nowrap", "text-ellipsis"];

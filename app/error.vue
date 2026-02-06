@@ -3,7 +3,7 @@
     <div class="text-[3rem] font-bold">似乎遇到了一些问题……</div>
     <div class="flex items-center text-[2rem]">
       <span>错误代码：</span>
-      <span :class="getCodeColor(props.error.statusCode)">{{ props.error.statusCode }}</span>
+      <span :class="getCodeColor(error.statusCode)">{{ error.statusCode }}</span>
       <div class="ml-auto flex items-center gap-2">
         <button
           v-for="button in buttonGroup"
@@ -16,10 +16,10 @@
     </div>
     <OverlayScrollbarsComponent defer class="bg-muted flex-1 rounded">
       <div class="flex flex-col gap-2 p-4">
-        <span>信息：{{ props.error.message }}</span>
-        <span v-if="props.error?.statusMessage">状态信息：{{ props.error?.statusMessage }}</span>
-        <span v-if="props.error?.data">数据：{{ props.error?.data }}</span>
-        <span v-if="props.error?.cause">原因：{{ props.error?.cause }}</span>
+        <span>信息：{{ error.message }}</span>
+        <span v-if="error?.statusMessage">状态信息：{{ error?.statusMessage }}</span>
+        <span v-if="error?.data">数据：{{ error?.data }}</span>
+        <span v-if="error?.cause">原因：{{ error?.cause }}</span>
       </div>
     </OverlayScrollbarsComponent>
   </div>
@@ -27,7 +27,7 @@
 <script lang="ts" setup>
 import type { NuxtError } from "#app";
 
-const props = defineProps<{
+const { error } = defineProps<{
   error: NuxtError;
 }>();
 const getCodeColor = (code: number): string => {
