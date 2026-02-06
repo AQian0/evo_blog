@@ -3,7 +3,7 @@
     <div class="text-[3rem] font-bold">似乎遇到了一些问题……</div>
     <div class="flex items-center text-[2rem]">
       <span>错误代码：</span>
-      <span :class="getCodeColor(error.statusCode)">{{ error.statusCode }}</span>
+      <span :class="codeColor">{{ error.statusCode }}</span>
       <div class="ml-auto flex items-center gap-2">
         <button
           v-for="button in buttonGroup"
@@ -26,19 +26,23 @@
 </template>
 <script lang="ts" setup>
 import type { NuxtError } from "#app";
+import { match, P } from "ts-pattern";
 
 const { error } = defineProps<{
   error: NuxtError;
 }>();
-const getCodeColor = (code: number): string => {
-  if (400 <= code) {
-    return "text-red-500";
-  }
-  if (300 <= code) {
-    return "text-yellow-500";
-  }
-  return "text-green-500";
-};
+
+const codeColor = computed(() =>
+  match(error.statusCode)
+    .returnType<string>()
+    .with(P.nullish, () => "")
+    .when(
+      c => c < 400,
+      () => "text-warning",
+    )
+    .with(P.number, () => "text-error")
+    .exhaustive(),
+);
 const buttonGroup = [
   {
     icon: "i-ri-home-2-line",
