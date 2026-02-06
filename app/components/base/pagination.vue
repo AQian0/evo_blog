@@ -1,5 +1,5 @@
 <template>
-  <div class="w-48 flex items-center justify-between leading-0">
+  <div class="flex w-48 items-center justify-between leading-0">
     <button
       :class="currentPage > 1 ? '' : ['cursor-not-allowed', 'opacity-50']"
       :disabled="currentPage <= 1"

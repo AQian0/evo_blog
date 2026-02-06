@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col items-center">
-    <div class="fixed left-0 top-0 z-1 h-40 w-full bg-linear-to-t" />
+    <div class="fixed top-0 left-0 z-1 h-40 w-full bg-linear-to-t" />
     <div class="mt-24 indent-2 text-4xl tracking-[0.5rem]">{{ blog?.title }}</div>
     <ContentRenderer
       v-if="blog"
-      class="relative my-6 w-1/2 max-w-none prose prose-zinc"
+      class="prose prose-zinc relative my-6 w-1/2 max-w-none"
       :value="blog"
     />
-    <div class="flex flex-col fixed transition space-y-4 left-[86%] top-[70%]">
+    <div class="fixed top-[70%] left-[86%] flex flex-col space-y-4 transition">
       <button v-for="item in extendedList" cursor-pointer type="button" @click="item.method">
         <Icon size="1.5rem" :name="item.label" />
       </button>

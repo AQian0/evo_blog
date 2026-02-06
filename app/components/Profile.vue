@@ -2,11 +2,11 @@
   <Motion
     layout
     as="div"
-    class="flex flex-col items-center justify-center transition-all overflow-hidden shadow-lg bg-muted"
+    class="bg-muted flex flex-col items-center justify-center overflow-hidden shadow-lg transition-all"
     :transition="{ type: 'tween' }"
   >
     <nuxt-picture
-      class="mb-16 aspect-square overflow-hidden w-64 rounded-full"
+      class="mb-16 aspect-square w-64 overflow-hidden rounded-full"
       src="/images/avatar.jpg"
       height="256"
       width="256"
@@ -16,7 +16,7 @@
         fetchpriority: 'high',
       }"
     />
-    <ul class="flex flex-col mb-8 space-y-4">
+    <ul class="mb-8 flex flex-col space-y-4">
       <li
         v-for="option in nav"
         class="cursor-pointer opacity-50 transition hover:opacity-100"

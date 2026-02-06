@@ -1,6 +1,6 @@
 <template>
   <li
-    class="flex w-160 cursor-pointer justify-between items-center px-3 py-2 transition text-xl"
+    class="flex w-160 cursor-pointer items-center justify-between px-3 py-2 text-xl transition"
     @click="goBlog"
   >
     <base-text omitted>{{ blog.title }}</base-text>

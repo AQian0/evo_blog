@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen w-full gap-2 p-12">
+  <div class="flex h-screen w-full flex-col gap-2 p-12">
     <div class="text-[3rem] font-bold">似乎遇到了一些问题……</div>
     <div class="flex items-center text-[2rem]">
       <span>错误代码：</span>
@@ -7,14 +7,14 @@
       <div class="ml-auto flex items-center gap-2">
         <button
           v-for="button in buttonGroup"
-          class="flex items-center cursor-pointer justify-center gap-2 rounded-full p-2"
+          class="flex cursor-pointer items-center justify-center gap-2 rounded-full p-2"
           @click="button.method"
         >
           <Icon size="1.5rem" :name="button.icon" />
         </button>
       </div>
     </div>
-    <OverlayScrollbarsComponent defer class="flex-1 rounded bg-muted">
+    <OverlayScrollbarsComponent defer class="bg-muted flex-1 rounded">
       <div class="flex flex-col gap-2 p-4">
         <span>信息：{{ props.error.message }}</span>
         <span v-if="props.error?.statusMessage">状态信息：{{ props.error?.statusMessage }}</span>

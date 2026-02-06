@@ -1,5 +1,5 @@
 <template>
-  <div class="h-20 flex items-center mt-auto">
+  <div class="mt-auto flex h-20 items-center">
     <!-- 令人迷惑的一点——外层Unocss设置的透明度不会和内层的实现互动
     因此内层的hover效果并不会生效
     所以无奈地在每一个元素中添加了透明度 -->

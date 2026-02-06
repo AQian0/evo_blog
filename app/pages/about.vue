@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center py-16 space-y-4">
+  <div class="flex flex-col items-center space-y-4 py-16">
     <div class="text-2xl">关于</div>
     <div class="flex flex-col space-y-2">
       <div v-for="info in infoList" class="inline-flex">

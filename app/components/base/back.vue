@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute left-6 top-4 z-10 flex cursor-pointer items-center opacity-50 transition space-x-1 hover:opacity-100"
+    class="absolute top-4 left-6 z-10 flex cursor-pointer items-center space-x-1 opacity-50 transition hover:opacity-100"
     @click="back"
   >
     <button class="leading-0">

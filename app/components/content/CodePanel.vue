@@ -1,12 +1,12 @@
 <template>
-  <UCollapsible v-model:open="open" class="flex flex-col my-2 gap-2">
+  <UCollapsible v-model:open="open" class="my-2 flex flex-col gap-2">
     <button
-      class="flex p-1 items-center hover:bg-accent rounded-sm"
+      class="hover:bg-accent flex items-center rounded-sm p-1"
       :class="open ? 'justify-between' : 'justify-center'"
     >
       <Motion
         as="div"
-        class="flex justify-center items-center gap-1 flex-none"
+        class="flex flex-none items-center justify-center gap-1"
         layout
         :transition="{ type: 'tween' }"
       >
