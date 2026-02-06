@@ -17,7 +17,7 @@
     <OverlayScrollbarsComponent defer class="bg-muted flex-1 rounded">
       <div class="flex flex-col gap-2 p-4">
         <span>信息：{{ error.message }}</span>
-        <span v-if="error?.statusMessage">状态信息：{{ error?.statusMessage }}</span>
+        <span v-if="error?.statusMessage">状态信息：{{ error?.statusText }}</span>
         <span v-if="error?.data">数据：{{ error?.data }}</span>
         <span v-if="error?.cause">原因：{{ error?.cause }}</span>
       </div>
