@@ -29,7 +29,7 @@ const infoList = ref([
   {
     label: "Github",
     name: "evo_blog",
-    path: "https://github.com/AQian-Cup/evo_blog",
+    path: "https://github.com/AQian0/evo_blog",
   },
 ]);
 </script>
