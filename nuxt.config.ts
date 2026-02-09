@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    viewTransition: true
+    viewTransition: true,
   },
 
   vite: {
