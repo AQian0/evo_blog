@@ -1,5 +1,5 @@
 <template>
-  <button class="opacity-50 transition hover:opacity-100" @click="toggleDark(!isDark)">
+  <button class="opacity-50 transition hover:opacity-100" @click="handleToggle">
     <AnimatePresence mode="wait">
       <Motion
         :key="isDark ? 'moon' : 'sun'"
@@ -15,5 +15,15 @@
 <script lang="ts" setup>
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+const handleToggle = () => {
+  if (!document.startViewTransition) {
+    toggleDark(!isDark.value);
+    return;
+  }
+  document.startViewTransition(() => {
+    toggleDark(!isDark.value);
+  });
+};
 </script>
 <style scoped></style>
