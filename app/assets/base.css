@@ -50,6 +50,27 @@
   --ring: oklch(0.442 0.017 285.786);
 }
 
+/* View Transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  opacity: 1;
+}
+
+::view-transition-new(root) {
+  animation: subtle-fade 0.25s ease-out;
+}
+
+@keyframes subtle-fade {
+  from {
+    opacity: 0;
+  }
+}
+
 @theme inline {
   --color-background: var(--ui-bg);
   --color-foreground: var(--ui-text);
