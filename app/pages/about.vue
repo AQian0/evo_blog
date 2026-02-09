@@ -23,8 +23,8 @@ const infoList = ref([
   },
   {
     label: "字体",
-    name: "HarmonyOS Sans",
-    path: "https://developer.harmonyos.com/cn/docs/design/des-guides/font-0000001157868583",
+    name: "Maple Mono",
+    path: "https://font.subf.dev/",
   },
   {
     label: "Github",
