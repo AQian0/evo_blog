@@ -1,14 +1,16 @@
 <template>
-  <div class="leading-0 opacity-50 transition hover:opacity-100">
-    <Transition name="fade" mode="out-in" @click="toggleDark(!isDark)">
-      <button v-if="!isDark">
-        <Icon name="i-ri-sun-fill" />
-      </button>
-      <button v-else>
-        <Icon name="i-ri-moon-fill" />
-      </button>
-    </Transition>
-  </div>
+  <button class="opacity-50 transition hover:opacity-100" @click="toggleDark(!isDark)">
+    <AnimatePresence mode="wait">
+      <Motion
+        :key="isDark ? 'moon' : 'sun'"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :exit="{ opacity: 0 }"
+      >
+        <Icon :name="isDark ? 'i-ri-moon-fill' : 'i-ri-sun-fill'" />
+      </Motion>
+    </AnimatePresence>
+  </button>
 </template>
 <script lang="ts" setup>
 const isDark = useDark();
