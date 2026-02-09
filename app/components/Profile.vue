@@ -54,7 +54,7 @@ const nav = ref([
 const icons = ref([
   {
     label: "i-ri-github-line",
-    path: "https://github.com/AQian-Cup",
+    path: "https://github.com/AQian0",
   },
   {
     label: "i-ri-netease-cloud-music-line",
