@@ -2,6 +2,7 @@
   <div class="relative w-3xl text-base" @keyup.enter="search">
     <Input v-model="content" type="text" :placeholder="placeholder" />
     <button
+      type="button"
       class="absolute top-[50%] right-2 translate-y-[-50%] cursor-pointer leading-0 opacity-50"
       @click="search"
     >

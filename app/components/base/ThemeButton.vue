@@ -1,7 +1,8 @@
 <template>
-  <button class="opacity-50 transition hover:opacity-100" @click="handleToggle">
+  <button type="button" class="opacity-50 transition hover:opacity-100" @click="handleToggle">
     <AnimatePresence mode="wait">
       <Motion
+        as="span"
         :key="isDark ? 'moon' : 'sun'"
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 1 }"

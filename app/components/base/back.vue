@@ -3,7 +3,7 @@
     class="flex cursor-pointer items-center space-x-1 opacity-50 transition hover:opacity-100"
     @click="back"
   >
-    <button class="leading-0">
+    <button type="button" class="leading-0">
       <Icon size="2rem" name="i-ri-arrow-left-double-fill" />
     </button>
     <div>{{ text }}</div>

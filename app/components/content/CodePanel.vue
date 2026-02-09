@@ -1,20 +1,21 @@
 <template>
   <UCollapsible v-model:open="open" class="my-2 flex flex-col gap-2">
     <button
+      type="button"
       class="hover:bg-accent flex items-center rounded-sm p-1"
       :class="open ? 'justify-between' : 'justify-center'"
     >
       <Motion
-        as="div"
+        as="span"
         class="flex flex-none items-center justify-center gap-1"
         layout
         :transition="{ type: 'tween' }"
       >
         <Icon size="1rem" :name />
-        <div class="text-base">{{ fileName }}</div>
+        <span class="text-base">{{ fileName }}</span>
       </Motion>
       <Motion
-        as="div"
+        as="span"
         class="leading-0"
         :animate="{ rotate: open ? -90 : 0 }"
         layout

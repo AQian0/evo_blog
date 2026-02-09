@@ -7,6 +7,7 @@
       <div class="ml-auto flex items-center gap-2">
         <button
           v-for="button in buttonGroup"
+          type="button"
           class="flex cursor-pointer items-center justify-center gap-2 rounded-full p-2"
           @click="button.method"
         >
