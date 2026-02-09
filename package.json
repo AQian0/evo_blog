@@ -56,9 +56,6 @@
     "shadcn-nuxt": "^2.4.3",
     "simple-git-hooks": "^2.13.1"
   },
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
-  },
   "simple-git-hooks": {
     "pre-commit": "bunx lint-staged"
   },
