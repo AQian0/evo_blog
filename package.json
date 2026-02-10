@@ -47,20 +47,12 @@
     "@types/bun": "^1.3.8",
     "@vueuse/core": "^14.2.0",
     "@vueuse/nuxt": "^14.2.0",
-    "lint-staged": "^16.2.7",
     "nuxt": "^4.3.0",
     "nuxt-typed-router": "^4.0.2",
     "oxfmt": "^0.28.0",
     "oxlint": "^1.43.0",
     "oxlint-tsgolint": "^0.11.4",
-    "shadcn-nuxt": "^2.4.3",
-    "simple-git-hooks": "^2.13.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "bunx lint-staged"
-  },
-  "lint-staged": {
-    "*": "oxlint"
+    "shadcn-nuxt": "^2.4.3"
   },
   "trustedDependencies": [
     "@parcel/watcher",
@@ -68,7 +60,6 @@
     "better-sqlite3",
     "esbuild",
     "sharp",
-    "simple-git-hooks",
     "vue-demi"
   ]
 }
