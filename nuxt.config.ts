@@ -15,6 +15,12 @@ export default defineNuxtConfig({
             "A blog that documents programming-related content such as JavaScript, Vue, and Rust, which, like you and me, will get better.",
         },
       ],
+      link: [
+        {
+          rel: "stylesheet",
+          href: "https://chinese-fonts-cdn.deno.dev/packages/maple-mono-cn/dist/MapleMono-CN-Regular/result.css",
+        },
+      ],
     },
     viewTransition: true,
   },
