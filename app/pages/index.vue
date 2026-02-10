@@ -9,7 +9,7 @@
       </OverlayScrollbarsComponent>
       <base-pagination
         :total="totalCount"
-        :page-size="query?.perPage"
+        :perPage="query?.perPage"
         :current-page="query?.page"
         @change="changePage"
       />

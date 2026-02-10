@@ -27,9 +27,9 @@
 interface Props {
   total?: number;
   currentPage?: number;
-  pageSize?: number;
+  perPage?: number;
 }
-const { total = 0, currentPage = 1, pageSize = 10 } = defineProps<Props>();
+const { total = 0, currentPage = 1, perPage = 10 } = defineProps<Props>();
 const emit = defineEmits<{
   change: [page: number];
 }>();
@@ -37,7 +37,7 @@ const sizeList = computed(() => {
   if (!total) {
     return [];
   }
-  const totalPages = Math.ceil(total / pageSize);
+  const totalPages = Math.ceil(total / perPage);
   let lowPage = 0 < currentPage - 2 ? currentPage - 2 : 1;
   let highPage = currentPage + 2 < totalPages ? currentPage + 2 : totalPages;
   if (4 > highPage - lowPage) {
