@@ -2,7 +2,7 @@
   <div class="flex h-full flex-col items-center p-2">
     <BaseSearch />
     <div class="relative flex flex-1 flex-col items-center justify-around gap-4">
-      <OverlayScrollbarsComponent defer class="h-[448px]">
+      <OverlayScrollbarsComponent defer class="h-112">
         <BlogList>
           <BlogListItem v-for="blog in blogs" :blog />
         </BlogList>
