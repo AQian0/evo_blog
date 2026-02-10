@@ -4,7 +4,7 @@
       :class="currentPage > 1 ? '' : ['cursor-not-allowed', 'opacity-50']"
       :disabled="currentPage <= 1"
       type="button"
-      @click="turnPage('up')"
+      @click="emit('change', currentPage - 1)"
     >
       <Icon size="2rem" name="i-ri-arrow-left-s-fill" />
     </button>
@@ -17,7 +17,7 @@
       :class="currentPage < sizeList.length ? '' : ['cursor-not-allowed', 'opacity-50']"
       :disabled="currentPage >= sizeList.length"
       type="button"
-      @click="turnPage('down')"
+      @click="emit('change', currentPage + 1)"
     >
       <Icon size="2rem" name="i-ri-arrow-right-s-fill" />
     </button>
@@ -53,15 +53,5 @@ const sizeList = computed(() => {
   );
   return pageArray;
 });
-const turnPage = (type: "up" | "down"): void => {
-  if ("up" === type) {
-    changePage(currentPage - 1);
-  } else {
-    changePage(currentPage + 1);
-  }
-};
-const changePage = (page: number): void => {
-  emit("change", page);
-};
 </script>
 <style scoped></style>
