@@ -6,6 +6,6 @@ export const appendPagination = (event: H3Event<EventHandlerRequest>, totalCount
     "X-Page": page,
     "X-Per-Page": perPage,
     "X-Total-Count": totalCount,
-    "X-Total-Pages": totalCount / perPage + 1,
+    "X-Total-Pages": Math.ceil(totalCount / perPage),
   });
 };
