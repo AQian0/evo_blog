@@ -1,22 +1,25 @@
-enum LanguageMap {
-  json = "Json",
-  js = "JavaScript",
-  ts = "TypeScript",
-  html = "HTML",
-  css = "CSS",
-  vue = "Vue",
-  sh = "Shell",
-  mdc = "MDC",
-  md = "Markdown",
-  yaml = "YAML",
-}
+const LANGUAGE_MAP = {
+  json: "JSON",
+  js: "JavaScript",
+  ts: "TypeScript",
+  html: "HTML",
+  css: "CSS",
+  vue: "Vue",
+  sh: "Shell",
+  mdc: "Markdown",
+  md: "Markdown",
+  yaml: "YAML",
+} as const;
+
+type LanguageKey = keyof typeof LANGUAGE_MAP;
+
+const isLanguageKey = (key: string): key is LanguageKey => {
+  return key in LANGUAGE_MAP;
+};
 
 export const useLanguageIcon = (extName: string): string => {
-  if (!(extName in LanguageMap)) {
+  if (!isLanguageKey(extName)) {
     return `i-ri-file-unknow-line`;
   }
-  if ("mdc" === extName) {
-    extName = "md";
-  }
-  return `i-catppuccin-${LanguageMap[extName as keyof typeof LanguageMap].toLowerCase()}`;
+  return `i-catppuccin-${LANGUAGE_MAP[extName].toLowerCase()}`;
 };
