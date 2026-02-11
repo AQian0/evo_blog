@@ -9,7 +9,7 @@
       >
         CC BY-NC 4.0
       </NuxtLink>
-      <span class="opacity-25">2024-PRESENT</span>
+      <span class="opacity-25">2023-PRESENT</span>
       <span class="opacity-25">© AQian</span>
     </div>
   </div>
