@@ -3,7 +3,7 @@
     <div class="text-2xl">关于</div>
     <div class="flex flex-col space-y-2">
       <div v-for="info in infoList" class="inline-flex">
-        <div class="w-20">{{ info.label }}：</div>
+        <div class="w-24">{{ info.label }}：</div>
         <NuxtLink class="font-bold" :to="info.path">{{ info.name }}</NuxtLink>
       </div>
     </div>
