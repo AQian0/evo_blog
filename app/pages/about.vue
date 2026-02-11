@@ -27,6 +27,11 @@ const infoList = ref([
     path: "https://font.subf.dev/",
   },
   {
+    label: "字体CDN",
+    name: "中文网字计划",
+    path: "https://chinese-font.netlify.app/",
+  },
+  {
     label: "Github",
     name: "evo_blog",
     path: "https://github.com/AQian0/evo_blog",
