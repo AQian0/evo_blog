@@ -45,6 +45,12 @@ const nav = ref([
     },
   },
   {
+    label: "堆栈",
+    method: async (): Promise<void> => {
+      await navigateTo("/stack");
+    }
+  },
+  {
     label: "支持",
     method: async (): Promise<void> => {
       await navigateTo("/support");
