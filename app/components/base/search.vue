@@ -1,20 +1,18 @@
 <template>
-  <div class="relative w-3xl text-base" @keyup.enter="search">
-    <Input ref="inputRef" v-model="content" type="text" :placeholder="placeholder" />
-    <div class="absolute top-[50%] right-3 translate-y-[-50%] flex items-center gap-2">
-      <KbdGroup>
-        <Kbd>Ctrl</Kbd>
-        <span>+</span>
-        <Kbd>K</Kbd>
-      </KbdGroup>
-      <button
-        type="button"
-        class="cursor-pointer leading-0 opacity-50 transition hover:opacity-100"
-        @click="search"
-      >
+  <div class="w-3xl text-base" @keyup.enter="search">
+    <InputGroup>
+      <InputGroupInput ref="inputRef" v-model="content" type="text" :placeholder="placeholder" />
+      <InputGroupAddon align="inline-start">
         <Icon name="i-ri-search-line" />
-      </button>
-    </div>
+      </InputGroupAddon>
+      <InputGroupAddon align="inline-end">
+        <KbdGroup>
+          <Kbd>Ctrl</Kbd>
+          <span>+</span>
+          <Kbd>K</Kbd>
+        </KbdGroup>
+      </InputGroupAddon>
+    </InputGroup>
   </div>
 </template>
 <script lang="ts" setup>
