@@ -2,7 +2,7 @@
   <Motion
     layout
     as="div"
-    class="bg-muted flex flex-col gap-16 items-center justify-center overflow-hidden shadow-lg transition-all"
+    class="bg-muted flex flex-col items-center justify-center gap-16 overflow-hidden shadow-lg transition-all"
     :transition="{ type: 'tween' }"
   >
     <nuxt-picture
@@ -12,6 +12,7 @@
       width="256"
       alt="avatar"
       preload
+      loading="eager"
       :imgAttrs="{
         fetchpriority: 'high',
       }"
