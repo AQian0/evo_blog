@@ -2,11 +2,11 @@
   <Motion
     layout
     as="div"
-    class="bg-muted flex flex-col items-center justify-center overflow-hidden shadow-lg transition-all"
+    class="bg-muted flex flex-col gap-16 items-center justify-center overflow-hidden shadow-lg transition-all"
     :transition="{ type: 'tween' }"
   >
     <nuxt-picture
-      class="mb-16 aspect-square w-64 overflow-hidden rounded-full"
+      class="aspect-square w-64 overflow-hidden rounded-full"
       src="/images/avatar.jpg"
       height="256"
       width="256"
@@ -16,24 +16,26 @@
         fetchpriority: 'high',
       }"
     />
-    <ul class="mb-8 flex flex-col space-y-4">
-      <li
-        v-for="option in nav"
-        class="cursor-pointer opacity-50 transition hover:opacity-100"
-        @click="option.method"
-      >
-        {{ option.label }}
-      </li>
-    </ul>
-    <ul class="flex space-x-4 leading-0">
-      <li
-        v-for="icon in icons"
-        class="cursor-pointer opacity-50 transition hover:opacity-100"
-        @click="goExternal(icon.path)"
-      >
-        <Icon size="1.5rem" :name="icon.label" />
-      </li>
-    </ul>
+    <div class="flex flex-col items-center gap-8">
+      <ul class="flex flex-col gap-4">
+        <li
+          v-for="option in nav"
+          class="cursor-pointer opacity-50 transition hover:opacity-100"
+          @click="option.method"
+        >
+          {{ option.label }}
+        </li>
+      </ul>
+      <ul class="flex gap-4 leading-0">
+        <li
+          v-for="icon in icons"
+          class="cursor-pointer opacity-50 transition hover:opacity-100"
+          @click="goExternal(icon.path)"
+        >
+          <Icon size="1.5rem" :name="icon.label" />
+        </li>
+      </ul>
+    </div>
   </Motion>
 </template>
 <script lang="ts" setup>
@@ -48,7 +50,7 @@ const nav = ref([
     label: "堆栈",
     method: async (): Promise<void> => {
       await navigateTo("/stack");
-    }
+    },
   },
   {
     label: "支持",
