@@ -22,7 +22,7 @@ const content = ref((route.query.search as string) || "");
 
 const inputRef = ref<{ $el: HTMLInputElement } | null>(null);
 
-onKeyStroke("k", (e) => {
+onKeyStroke("k", e => {
   if (e.ctrlKey || e.metaKey) {
     e.preventDefault();
     inputRef.value?.$el.focus();
