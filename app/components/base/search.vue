@@ -3,7 +3,7 @@
     <Input v-model="content" type="text" :placeholder="placeholder" />
     <button
       type="button"
-      class="absolute top-[50%] right-2 translate-y-[-50%] cursor-pointer leading-0 opacity-50"
+      class="absolute top-[50%] right-3 translate-y-[-50%] cursor-pointer leading-0 opacity-50 transition hover:opacity-100"
       @click="search"
     >
       <Icon name="i-ri-search-line" />
