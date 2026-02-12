@@ -1,8 +1,8 @@
 <template>
-  <NuxtLayout>
-    <OverlayScrollbarsComponent defer class="h-screen">
+  <OverlayScrollbarsComponent defer class="h-screen">
+    <NuxtLayout>
       <NuxtLoadingIndicator :height="1" />
       <NuxtPage class="w-full flex-1" />
-    </OverlayScrollbarsComponent>
-  </NuxtLayout>
+    </NuxtLayout>
+  </OverlayScrollbarsComponent>
 </template>
