@@ -4,9 +4,10 @@
       :class="currentPage > 1 ? '' : ['cursor-not-allowed', 'opacity-50']"
       :disabled="currentPage <= 1"
       type="button"
+      aria-label="上一页"
       @click="emit('change', currentPage - 1)"
     >
-      <Icon size="2rem" name="i-ri-arrow-left-s-fill" />
+      <Icon size="2rem" name="i-ri-arrow-left-s-fill" aria-hidden="true" />
     </button>
     <ul class="flex space-x-4">
       <li v-for="item in sizeList" class="cursor-pointer" :class="currentPage === item ? '' : ''">
@@ -17,9 +18,10 @@
       :class="currentPage < sizeList.length ? '' : ['cursor-not-allowed', 'opacity-50']"
       :disabled="currentPage >= sizeList.length"
       type="button"
+      aria-label="下一页"
       @click="emit('change', currentPage + 1)"
     >
-      <Icon size="2rem" name="i-ri-arrow-right-s-fill" />
+      <Icon size="2rem" name="i-ri-arrow-right-s-fill" aria-hidden="true" />
     </button>
   </div>
 </template>

@@ -1,5 +1,10 @@
 <template>
-  <button type="button" class="opacity-50 transition hover:opacity-100" @click="handleToggle">
+  <button
+    type="button"
+    class="opacity-50 transition hover:opacity-100"
+    :aria-label="isDark ? '切换到浅色模式' : '切换到深色模式'"
+    @click="handleToggle"
+  >
     <AnimatePresence mode="wait">
       <Motion
         as="span"
