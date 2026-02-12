@@ -17,7 +17,7 @@
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
-const handleToggle = () => {
+const handleToggle = (): void => {
   if (!document.startViewTransition) {
     toggleDark(!isDark.value);
     return;
