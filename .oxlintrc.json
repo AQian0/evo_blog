@@ -12,6 +12,7 @@
     {
       "files": [
         "nuxt.config.ts",
+        "app.config.ts",
         "content.config.ts",
         "modules/**/*.ts",
         "server/api/**/*.ts",
