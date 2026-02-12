@@ -17,8 +17,16 @@ export default defineNuxtConfig({
       ],
       link: [
         {
+          rel: "preload",
+          as: "style",
+          href: "https://chinese-fonts-cdn.deno.dev/packages/maple-mono-cn/dist/MapleMono-CN-Regular/result.css",
+          onload: "this.onload=null;this.rel='stylesheet'",
+        },
+        {
           rel: "stylesheet",
           href: "https://chinese-fonts-cdn.deno.dev/packages/maple-mono-cn/dist/MapleMono-CN-Regular/result.css",
+          media: "print",
+          onload: "this.media='all'",
         },
       ],
     },
