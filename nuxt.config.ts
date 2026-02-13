@@ -79,7 +79,6 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ["app/types"],
     presets: [
       {
         from: "overlayscrollbars",
