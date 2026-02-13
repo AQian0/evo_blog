@@ -33,13 +33,15 @@
           class="cursor-pointer opacity-50 transition hover:opacity-100"
           @click="goExternal(icon.path)"
         >
-          <Icon size="1.5rem" :name="icon.label" />
+          <Icon size="1.5rem" :name="`i-${icon.prefix}-${icon.name}`" />
         </li>
       </ul>
     </div>
   </Motion>
 </template>
 <script lang="ts" setup>
+import type { Icon } from '~/types';
+
 const nav = ref([
   {
     label: "关于",
@@ -60,13 +62,17 @@ const nav = ref([
     },
   },
 ]);
-const icons = ref([
+const icons = ref<Array<{
+  path: string
+} & Icon>>([
   {
-    label: "i-ri-github-line",
+    prefix: "ri",
+    name: "github-line",
     path: "https://github.com/AQian0",
   },
   {
-    label: "i-ri-netease-cloud-music-line",
+    prefix: "ri",
+    name: "netease-cloud-music-line",
     path: "",
   },
 ]);

@@ -11,7 +11,7 @@
           class="flex cursor-pointer items-center justify-center gap-2 rounded-full p-2"
           @click="button.method"
         >
-          <Icon size="1.5rem" :name="button.icon" />
+          <Icon size="1.5rem" :name="`i-${button.icon.prefix}-${button.icon.name}`" />
         </button>
       </div>
     </div>
@@ -46,7 +46,10 @@ const codeColor = computed(() =>
 );
 const buttonGroup = [
   {
-    icon: "i-ri-home-2-line",
+    icon: {
+      prefix: "ri",
+      name: "home-2-line"
+    },
     method: async (): Promise<void> => {
       await clearError({
         redirect: "/",
@@ -54,7 +57,10 @@ const buttonGroup = [
     },
   },
   {
-    icon: "i-ri-github-line",
+    icon: {
+      prefix: "ri",
+      name: "github-line"
+    },
     method: async (): Promise<void> => {
       await navigateTo("https://github.com/AQian-Cup/evo_blog/issues", {
         external: true,
