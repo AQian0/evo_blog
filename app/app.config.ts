@@ -4,4 +4,7 @@ export default defineAppConfig({
       neutral: "zinc",
     },
   },
+  icon: {
+    cssLayer: "base",
+  },
 });
