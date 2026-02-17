@@ -1,0 +1,15 @@
+nav:
+  - label: 关于
+    path: /about
+  - label: 堆栈
+    path: /stack
+  - label: 支持
+    path: /support
+
+icons:
+  - prefix: ri
+    name: github-line
+    path: https://github.com/AQian0
+  - prefix: ri
+    name: netease-cloud-music-line
+    path: ""

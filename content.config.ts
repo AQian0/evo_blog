@@ -1,6 +1,8 @@
 import { defineCollection, defineContentConfig } from "@nuxt/content";
 import { object, string, array, date, optional, record, any } from "valibot";
 
+import { kindSchema } from "./app/types";
+
 export default defineContentConfig({
   collections: {
     blogs: defineCollection({
@@ -16,6 +18,32 @@ export default defineContentConfig({
         createdDate: date(),
         updatedDate: date(),
         tags: array(string()),
+      }),
+    }),
+    profile: defineCollection({
+      type: "data",
+      source: "profile.yaml",
+      schema: object({
+        nav: array(
+          object({
+            label: string(),
+            path: string(),
+          }),
+        ),
+        icons: array(
+          object({
+            prefix: string(),
+            name: string(),
+            path: string(),
+          }),
+        ),
+      }),
+    }),
+    stacks: defineCollection({
+      type: "data",
+      source: "stacks.yaml",
+      schema: object({
+        kinds: array(kindSchema),
       }),
     }),
   },

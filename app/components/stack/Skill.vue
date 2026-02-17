@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-accented/50 flex h-20 w-20 cursor-pointer items-center justify-center rounded transition hover:bg-accented"
+    class="bg-accented/50 hover:bg-accented flex h-20 w-20 cursor-pointer items-center justify-center rounded transition"
     @click="goExternal"
   >
     <Icon v-if="icon" size="2rem" class="text-default" :name="`i-${icon.prefix}-${icon.name}`" />
@@ -14,7 +14,7 @@ import type { Skill } from "~/types";
 const { name, icon, url } = defineProps<Skill>();
 const goExternal = async (): Promise<void> => {
   if (!url) {
-    return
+    return;
   }
   await navigateTo(url, {
     open: {
