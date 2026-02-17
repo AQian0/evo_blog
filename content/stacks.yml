@@ -40,6 +40,9 @@ kinds:
           name: nuxt
         url: https://nuxt.com
       - name: VueUse
+        icon:
+          prefix: custom
+          name: vueuse
         url: https://vueuse.org
       - name: TailwindCSS
         icon:
@@ -60,6 +63,9 @@ kinds:
           name: macos
         url: https://www.apple.com/os/macos
       - name: Arch Linux
+        icon:
+          prefix: custom
+          name: archlinux
         url: https://archlinux.org
       - name: Bun
         icon:
@@ -80,6 +86,9 @@ kinds:
           name: git
         url: https://git-scm.com
       - name: Jujutsu
+        icon:
+          prefix: custom
+          name: jujutsu
         url: https://www.jj-vcs.dev/latest
       - name: Docker
         icon:
@@ -87,4 +96,7 @@ kinds:
           name: docker
         url: https://www.docker.com/
       - name: Helix
+        icon:
+          prefix: custom
+          name: helix
         url: https://helix-editor.com
