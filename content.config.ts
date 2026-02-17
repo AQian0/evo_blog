@@ -22,7 +22,7 @@ export default defineContentConfig({
     }),
     profile: defineCollection({
       type: "data",
-      source: "profile.yaml",
+      source: "profile.yml",
       schema: object({
         nav: array(
           object({
@@ -41,7 +41,7 @@ export default defineContentConfig({
     }),
     stacks: defineCollection({
       type: "data",
-      source: "stacks.yaml",
+      source: "stacks.yml",
       schema: object({
         kinds: array(kindSchema),
       }),
