@@ -86,3 +86,5 @@ kinds:
           prefix: catppuccin
           name: docker
         url: https://www.docker.com/
+      - name: Helix
+        url: https://helix-editor.com
