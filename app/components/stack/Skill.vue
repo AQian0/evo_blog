@@ -3,8 +3,8 @@
     class="bg-accented/50 hover:bg-accented flex h-20 w-20 cursor-pointer items-center justify-center rounded transition"
     @click="goExternal"
   >
-    <Icon v-if="icon" size="2rem" class="text-default" :name="`i-${icon.prefix}-${icon.name}`" />
-    <span v-else class="text-toned">{{ name }}</span>
+    <Icon v-if="icon" size="2rem" :name="`i-${icon.prefix}-${icon.name}`" />
+    <span v-else class="text-toned text-center">{{ name }}</span>
   </div>
 </template>
 
