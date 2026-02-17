@@ -48,7 +48,7 @@ const buttonGroup = [
   {
     icon: {
       prefix: "ri",
-      name: "home-2-line"
+      name: "home-2-line",
     },
     method: async (): Promise<void> => {
       await clearError({
@@ -59,7 +59,7 @@ const buttonGroup = [
   {
     icon: {
       prefix: "ri",
-      name: "github-line"
+      name: "github-line",
     },
     method: async (): Promise<void> => {
       await navigateTo("https://github.com/AQian-Cup/evo_blog/issues", {
