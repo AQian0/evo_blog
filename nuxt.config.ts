@@ -76,6 +76,12 @@ export default defineNuxtConfig({
     serverBundle: {
       collections: ["ri", "catppuccin"],
     },
+    customCollections: [
+      {
+        prefix: "custom",
+        dir: "./app/assets/icons",
+      },
+    ],
   },
 
   imports: {
