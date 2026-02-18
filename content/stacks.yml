@@ -54,6 +54,16 @@ kinds:
           prefix: catppuccin
           name: unocss
         url: https://unocss.dev
+      - name: Vite
+        icon:
+          prefix: catppuccin
+          name: vite
+        url: https://vite.dev
+      - name: Vitest
+        icon:
+          prefix: catppuccin
+          name: vitest
+        url: https://vitest.dev
 
   - name: 环境
     skills:
