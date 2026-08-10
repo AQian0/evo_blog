@@ -10,7 +10,6 @@ export default defineNuxtModule({
       name: "OverlayScrollbarsComponent",
       filePath: "overlayscrollbars-vue",
       export: "OverlayScrollbarsComponent",
-      mode: "client",
     });
   },
 });
