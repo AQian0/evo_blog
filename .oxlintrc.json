@@ -10,6 +10,13 @@
       }
     },
     {
+      // shadcn-vue 生成的桶文件模式（index.ts ⇄ 组件）天然成环，保持与上游一致
+      "files": ["app/components/ui/**"],
+      "rules": {
+        "import/no-cycle": "off"
+      }
+    },
+    {
       "files": [
         "nuxt.config.ts",
         "app.config.ts",
@@ -61,7 +68,7 @@
     "oxc/bad-bitwise-operator": "error",
     "oxc/no-barrel-file": "warn",
     "oxc/no-const-enum": "error",
-    "promise/catch-orerturn": "warn",
+    "promise/catch-or-return": "warn",
     "promise/spec-only": "warn",
     "typescript/explicit-function-return-type": "error",
     "typescript/no-dynamic-delete": "error",
@@ -77,7 +84,7 @@
     "unicorn/no-length-as-slice-end": "error",
     "unicorn/no-magic-array-flat-depth": "error",
     "unicorn/no-process-exit": "error",
-    "unicorn/no-uneless-error-capture-stack-trace": "error",
+    "unicorn/no-useless-error-capture-stack-trace": "error",
     "unicorn/prefer-modern-math-apis": "error",
     "unicorn/prefer-number-properties": "error",
     // pedantic
@@ -96,7 +103,7 @@
     "no-redeclare": "error",
     "no-self-compare": "error",
     "no-throw-literal": "error",
-    "redix": "error",
+    "radix": "error",
     "require-await": "error",
     "sort-vars": "error",
     "symbol-description": "error",
@@ -123,7 +130,7 @@
     "unicorn/no-unreadable-iife": "error",
     "unicorn/no-useless-promise-resolve-reject": "error",
     "unicorn/no-useless-undefined": "error",
-    "unicorn/prefer-array-falt": "warn",
+    "unicorn/prefer-array-flat": "warn",
     "unicorn/prefer-array-some": "warn",
     "unicorn/prefer-at": "warn",
     "unicorn/prefer-blob-reading-methods": "warn",
@@ -131,7 +138,7 @@
     "unicorn/prefer-date-now": "warn",
     "unicorn/prefer-dom-node-append": "warn",
     "unicorn/prefer-dom-node-dataset": "warn",
-    "unicorn/prefer-dom-node-removee": "warn",
+    "unicorn/prefer-dom-node-remove": "warn",
     "unicorn/prefer-event-target": "warn",
     "unicorn/prefer-math-min-max": "warn",
     "unicorn/prefer-math-trunc": "warn",
