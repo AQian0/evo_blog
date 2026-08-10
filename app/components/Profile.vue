@@ -11,7 +11,6 @@
       height="256"
       width="256"
       alt="avatar"
-      preload
       loading="eager"
       :imgAttrs="{
         fetchpriority: 'high',

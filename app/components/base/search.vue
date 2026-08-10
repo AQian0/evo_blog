@@ -1,7 +1,7 @@
 <template>
   <div class="w-3xl text-base" @keyup.enter="search">
     <InputGroup>
-      <InputGroupInput ref="inputRef" v-model="content" type="text" :placeholder="placeholder" />
+      <InputGroupInput ref="inputRef" v-model="content" type="text" :placeholder="placeholder" aria-label="搜索" />
       <InputGroupAddon align="inline-start">
         <Icon name="i-ri-search-line" />
       </InputGroupAddon>
