@@ -1,3 +1,4 @@
+import { queryCollection } from "@nuxt/content/server";
 import Fuse from "fuse.js";
 
 export default defineEventHandler(async event => {
@@ -7,20 +8,19 @@ export default defineEventHandler(async event => {
     search = "",
   }: { page: number; perPage: number; search: string } = getQuery(event);
   let builder = queryCollection(event, "blogs");
-  const totalCount = await builder.count();
-  appendPagination(event, totalCount);
-  // 或许应该使用id作为filter
-  const blogTitles: Array<string> = [];
   if (search) {
-    const blogs = await queryCollectionSearchSections(event, "blogs");
+    const blogs = await queryCollection(event, "blogs").select("blogId", "title", "tags").all();
     const fuse = new Fuse(blogs, {
-      keys: ["title", "tag"],
+      keys: ["title", "tags"],
     });
-    blogTitles.push(...fuse.search(search).map(item => item.item.title));
+    const blogIds = fuse.search(search).map(item => item.item.blogId);
+    if (blogIds.length === 0) {
+      appendPagination(event, 0);
+      return [];
+    }
+    builder = builder.where("blogId", "IN", blogIds);
   }
-  if (blogTitles.length > 0) {
-    builder = builder.where("title", "IN", blogTitles);
-  }
+  appendPagination(event, await builder.count());
   return await builder
     .skip((page - 1) * perPage)
     .limit(perPage)
