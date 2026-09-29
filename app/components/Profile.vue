@@ -2,19 +2,24 @@
   <Motion
     layout
     as="div"
-    class="bg-muted flex flex-col items-center justify-center gap-16 overflow-hidden shadow-lg transition-all"
+    class="bg-muted flex flex-col items-center justify-center gap-16 overflow-hidden py-20 shadow-lg transition-all"
     :transition="{ type: 'tween' }"
   >
-    <nuxt-img
-      class="aspect-square w-64 overflow-hidden rounded-full"
-      provider="github"
-      src="AQian0"
-      height="256"
-      width="256"
-      alt="avatar"
-      loading="eager"
-      fetchpriority="high"
-    />
+    <div class="relative w-64 max-w-full shrink-0">
+      <ProfileSignature
+        class="absolute bottom-full left-1/2 mb-4 h-14 w-56 max-w-full -translate-x-1/2"
+      />
+      <nuxt-img
+        class="aspect-square w-full overflow-hidden rounded-full"
+        provider="github"
+        src="AQian0"
+        height="256"
+        width="256"
+        alt="avatar"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
     <div class="flex flex-col items-center gap-8">
       <ul class="flex flex-col gap-4">
         <li
@@ -37,6 +42,8 @@
   </Motion>
 </template>
 <script lang="ts" setup>
+import ProfileSignature from "./ProfileSignature.vue";
+
 const { data: profile } = await useAsyncData("profile", () => queryCollection("profile").first());
 
 const goExternal = async (path: string): Promise<void> => {
