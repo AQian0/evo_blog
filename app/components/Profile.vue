@@ -5,16 +5,15 @@
     class="bg-muted flex flex-col items-center justify-center gap-16 overflow-hidden shadow-lg transition-all"
     :transition="{ type: 'tween' }"
   >
-    <nuxt-picture
+    <nuxt-img
       class="aspect-square w-64 overflow-hidden rounded-full"
-      src="/images/avatar.jpg"
+      provider="github"
+      src="AQian0"
       height="256"
       width="256"
       alt="avatar"
       loading="eager"
-      :imgAttrs="{
-        fetchpriority: 'high',
-      }"
+      fetchpriority="high"
     />
     <div class="flex flex-col items-center gap-8">
       <ul class="flex flex-col gap-4">
